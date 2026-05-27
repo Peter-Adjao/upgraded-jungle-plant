@@ -1,0 +1,74 @@
+
+.footer {
+	background-color: var(--footer-bg);
+	color: white;
+	list-style: none;
+	padding: 4rem 1.5rem;
+}
+
+.footer-container {
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+.footer-grid {
+	display: grid;
+	gap: 2rem;
+	margin-bottom: 3rem;
+}
+
+.brand-name {
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+
+.brand-description {
+	font-size: 0.9rem;
+	color: var(--footer-subtext);
+	line-height: 1.6;
+}
+ 
+.footer-social {
+	display: flex;
+	gap: 1rem;
+	margin-top: 1rem;
+	cursor: pointer;
+}
+
+.footer-social .social-icon {
+	transform: translateY(0);
+	transition: transform 0.3s ease, box-shadow 0.25s ease;
+}
+
+.footer-social .social-icon:hover {
+	/* transform: translateY(-0.7rem);	 */
+	box-shadow: 0 10px 20px rgba(46, 45, 45, 0.2);
+	border-radius: 10px;
+}
+
+hr {
+	border: none;
+	height: 1px;
+	background:var(--hr-background); 
+	margin: 2rem 0;
+}	
+
+@media (min-width: 768px) {
+	.footer-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (min-width: 1024px) {
+	.footer-grid {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+
+
+
+
+
+
+
