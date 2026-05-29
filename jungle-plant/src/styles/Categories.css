@@ -34,11 +34,11 @@
 }
  
 .jh-categories__select:hover {
-	border-color: #adf724;
+	border-color: var(--color-secondary);
 }
 
 .jh-categories__select:focus {
-	border-color: #adf724;
+	border-color: var(--color-secondvary);
 	box-shadow: 0 0 0 3px rgba(173, 247, 36, 0.2);
 }
 
@@ -46,7 +46,7 @@
 	padding: 0.6rem 1rem;
 	font-size: 0.9rem;
 	font-weight: 500;
-	border: 2px solid #adf724;
+	border: 2px solid var(--color-secondary);
 	border-radius: 6px;
 	background-color: #ffffff;
 	color:#1f2937;
@@ -55,8 +55,9 @@
 }
 
 .categories__reset:hover {
-	background-color: #adf724;
+	background-color: var(--color-secondary);
 	color: #ffffff;
+	
 }
 
 .categories__reset:active {

@@ -17,9 +17,9 @@
 	margin-bottom: 3rem;
 }
 
-.brand-name {
+.footer-logo-text {
 	font-size: 1.25rem;
-	font-weight: bold;
+	font-weight: 700;
 }
 
 .brand-description {
@@ -37,12 +37,11 @@
 
 .footer-social .social-icon {
 	transform: translateY(0);
-	transition: transform 0.3s ease, box-shadow 0.25s ease;
+	transition: transform 0.3s ease;
 }
 
 .footer-social .social-icon:hover {
-	/* transform: translateY(-0.7rem);	 */
-	box-shadow: 0 10px 20px rgba(46, 45, 45, 0.2);
+	transform: translateY(-0.3rem);	
 	border-radius: 10px;
 }
 
@@ -51,11 +50,59 @@ hr {
 	height: 1px;
 	background:var(--hr-background); 
 	margin: 2rem 0;
-}	
+}
+
+.footer-newsletter {
+	margin-top: 1rem;
+}
+
+
+.input-group {
+	display: flex;
+}
+
+
+.footer-input {
+	flex: 1;
+	padding: 0.6rem;
+	background-color: var(--input-background-color);
+	border: 1px solid var(--input-border-color);
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+	color: var(--white); 
+	cursor: pointer;
+	transition: border-color 0.3s ease;
+}
+
+
+input:focus {
+	border-color: var(--input-focus);
+	box-shadow: 0 0 4px rgba(173, 168, 168, 0.9);
+	outline: none;
+}
+
+.footer-newsletter p {
+	margin-bottom: 0.3rem;
+}
+
+.footer-bottom p {
+	text-align: left;
+} 
+
+.social-container h3 {
+	font-size: 1rem;
+	margin-top: 0.8rem;
+	margin-bottom: 0.5rem;
+	font-weight: 600;
+}
+
 
 @media (min-width: 768px) {
 	.footer-grid {
 		grid-template-columns: repeat(2, 1fr);
+	}
+	.footer-bottom p {
+		text-align: center;
 	}
 }
 

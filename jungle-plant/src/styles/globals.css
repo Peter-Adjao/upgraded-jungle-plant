@@ -6,18 +6,23 @@
   --gradient-accent: linear-gradient(to right,  var(--color-accent-start), var(--color-accent-end));
   --gray-50: #f9fafb;
   --white: #ffffff;
+  --color-secondary: #6da506;
+  --secondary-hover: #89cc0b;
+  --old: #adf724; 
   --cart-bg: #31b572;
 	--button-text: #ffffff;
   --footer-bg: #0f172a;
   --footer-subtext: #cbd5e1;
   --hr-background: #334155;
 	--button-hover: rgba(255, 255, 255, 0.2);
+  --input-background-color: #1e293b;
+  --input-border-color: #334155;
+  --placeholder-color: #f3f3f5;
+  --input-focus: #9ca3af;
 	--transition-fast: 0.25s ease;
   --transition-normal: color 0.2s ease;
 	--radius: 8px;
 	--spacing: 24px;
-
-
 }
 
 * {

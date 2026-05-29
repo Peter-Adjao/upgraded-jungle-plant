@@ -1,7 +1,6 @@
 "use client"
 import { useState, useMemo, useEffect } from "react";
 import { formatCurrency } from "../utils/format";
-import { plantList } from '../datas/plantList';
 import PropTypes from "prop-types";
 import "../styles/Cart.css";
 
