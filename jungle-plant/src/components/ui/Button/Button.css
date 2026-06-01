@@ -1,19 +1,156 @@
  
- .button {
+ 
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.5rem;
+
+    border: none;
+    border-radius: 6px;
+
+    font-size: 0.875rem;
+    font-weight: 500;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/*VARIANTS*/
+
+.button-default {
+    background: black;
+    color: white;
+}
+
+.button-default:hover {
+    background: #222;
+}
+
+.button-outline {
+    border: 1px solid #d1d5db;
+    background: white;
+    color: black;
+}
+
+.button-outline:hover {
+    background: #f3f4f6;
+}
+
+.button-secondary {
+    background: #e5e7eb;
+}
+
+.button-secondary:hover {
+    background: #d1d5db;
+}
+
+.button-destructive {
+    background: #dc2626;
+    color: white;
+}
+
+.button-destructive:hover {
+    background: #b91c1c;
+}
+
+.button-ghost {
+    background: transparent;
+}
+
+.button-ghost:hover {
+    background: #f3f4f6;
+}
+
+.button-link{
+    background: transparent;
+    color: blue;
+}
+
+.button-link:hover {
+    text-decoration: underline;
+}
+
+.button-success {
+    background-color: green;
+    color: white; 
+}
+
+.button-success:hover {
+    background-color: darkgreen;
+}
+
+.button-warning {
+    background-color: orange;
+    color: white;
+}
+
+.button-warning:hover {
+    background-color: darkorange;
+}
+
+.button-subscribe {
     background-color: var(--color-secondary);
     color: var(--white);
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     border: none;
     font-size: 0.9rem;
-    font-weight: 500;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
+    font-weight: 600;
+    border-radius: 0 8px 8px 0;
+    
     transition: all 0.2s ease;
     cursor: pointer;
  }
 
-.button:hover {
+.button-subscribe:hover {
     background: var(--secondary-hover);
 }
 
+.subscribe-button {
+    background: linear-gradient(
+        90deg,
+        #adf724,
+        #7bc000,
+    );
+
+    color: #111;
+    font-weight: 700;
+}
+
+.subscribe-button:hover {
+    background: linear-gradient(90deg, #7bc000, #adf724); /* reversed gradient */
+    color: white; /* text turns white */
+    transform: scale(1.05); /* slightly enlarges */
+}
+
+
+/*SIZES*/
+
+.button-default-size {
+    height: 36px;
+    padding: 0.25rem 0.75rem;
+}
+
+.button-sm {
+    height: 32px;
+    padding: 0.25rem 0.75rem;
+}
+
+.button-lg {
+    height: 40px;
+    padding: 0.75rem 1.5rem;
+}
+
+.button-icon {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+}
+
+.button-xl {
+    height: 60px;
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+}

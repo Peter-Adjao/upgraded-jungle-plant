@@ -14,15 +14,14 @@ width: 100%;
     margin-left: 0.7rem;
 }
 
+/*keeps the grid centered and clean */          
  .jh-plant-list {
     list-style-type: none;
     padding: 2rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    max-width: 1200p;    /*keeps the grid centered and clean */          
-}  
-
+    gap: 10px;
+ }
 
 
 .jh-sales {

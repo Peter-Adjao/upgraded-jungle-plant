@@ -5,6 +5,7 @@
 	justify-content: center;
 	flex-direction: column;
 	text-transform: capitalize;
+	border: 1px solid gray;
 }
 
 .plant-card-image-container {
@@ -40,9 +41,28 @@
     background-color: #31b572;
     border-radius: 8px;
 	transition: transform 0.2s ease, box-shadow 0.2s ease;
-	/* font-size: 0.8rem; */
 }
 
 .card-sales-badge:hover {
 	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
+
+.plantcard-subsection {
+	display: flex;
+	justify-content: space-between;
+}
+
+.plant-name {
+	color: var(--secondary-text);
+	font-weight: 600;
+} 
+
+
+.original-price {
+	color: var(--dark-text);
+	font-size: 1.25rem;
+	font-weight: 600;
+}
+
+
+

@@ -1,14 +1,14 @@
 'use client'
 
-import Image from 'next/image'
-import CareScale from './CareScale'
+import Image from 'next/image';
+import CareScale from './CareScale';
+import { Heart, ShoppingCart, Star } from 'lucide-react';
+import { formatCurrency } from "../utils/format";
 import '../styles/PlantCard.css'
 
-// function handleClick(plantName) {
-// 	 alert(`You want to buy 1 ${plantName}? Great choice 🌱✨`);
-// }
 
-function PlantCard({ cover, name, bestSale, water, light }) {
+
+function PlantCard({ cover, price, name, bestSale, water, light, addToCart }) {
 	return (
 		<li className='plant-card' >
 			<div className='plant-card-image-container'>
@@ -21,12 +21,25 @@ function PlantCard({ cover, name, bestSale, water, light }) {
 				 {bestSale && <div className="card-sales-badge">Sales</div>}
 			</div>
 
-			<h3 className='lmj-plant-name'>{name}</h3>
+			{/*Product name*/}
+			<h3 className='plant-name'>{name}</h3>
 
-			<div className='lmj-care-icons'>
+			{/* <div className='lmj-care-icons'>
 				<CareScale careType='water' care={water} />
 				<CareScale careType='light' care={light} />
-			</div>
+			</div> */}
+
+				{/* Price and Add to Cart Section */}
+				<div className="plantcard-subsection">
+					<div className="price-section">
+						<span  className="original-price">{formatCurrency(price)}</span>
+					</div>
+					<div className="button-section">
+						<button className="add-to-cart" onClick={() => addToCart(name, price)}>
+							<ShoppingCart />
+						</button>
+					</div>
+				</div>
 		</li>
 	)
 }

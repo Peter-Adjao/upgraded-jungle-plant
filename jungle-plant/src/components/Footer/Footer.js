@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import FooterSection from "./FooterSection";
 import { footerSections } from "./footer.config";
 import { FaFacebook, FaInstagram, FaXTwitter, FaYoutube } from "react-icons/fa6";
-import Button from "@/components/ui/Button"
+import Button from "@/components/ui/Button";
 import "@/styles/Footer.css";
 
 
@@ -51,11 +51,14 @@ export default function Footer() {
                             type="email"
                             placeholder="Enter your email"
                             value={inputValue}
-                            // onChange={handleInput}
-                            // onBlur={handleBlur}
+                            onChange={handleInput}
+                            onBlur={handleBlur}
                             className="footer-input"
                           />
-                          <Button className>
+                          <Button  size="lg"
+                           variant="subscribe"
+                           className="subscribe button"
+                           >
                             Subscribe
                           </Button>
                       </div>

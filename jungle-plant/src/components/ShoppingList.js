@@ -1,9 +1,9 @@
 "use client"
-import { useState } from 'react'
-import { plantList } from '../datas/plantList'
-import PlantCard from './PlantCard'
-import Categories from './Categories'
-import "../styles/ShoppingList.css"
+import { useState } from 'react';
+import { plantList } from '../datas/plantList';
+import PlantCard from './PlantCard';
+import Categories from './Categories';
+import "../styles/ShoppingList.css";
 
 function ShoppingList({ cart, updateCart }) {
 	// Selected category
@@ -46,10 +46,11 @@ function ShoppingList({ cart, updateCart }) {
 				{plantList.map((plant) =>
 					!activeCategory || activeCategory === plant.category ? (
 						<div key={plant.id}>
-							<PlantCard {...plant} />
-							<button className="add-to-cart" onClick={() => addToCart(plant.name, plant.price)}>
-								Add
-							</button>
+							<PlantCard 
+							key={plant.id}
+							{...plant} 
+							addToCart={addToCart}
+							/>
 						</div>
 					) : null
 				)}
