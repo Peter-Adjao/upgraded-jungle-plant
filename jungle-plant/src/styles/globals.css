@@ -26,6 +26,29 @@
   --transition-normal: color 0.2s ease;
 	--radius: 8px;
 	--spacing: 24px;
+  
+  --rating-star-filled: #111;
+  --rating-star-empty: #d1d5db;
+  --rating-score-color: #111827;
+  --rating-review-color: #6b7280;
+
+  --rating-font-size: 0.875rem;
+  --rating-gap: 0.375rem;
+  --rating-stars-gap: 0.125rem;
+
+  /*Size Variants*/
+  product-rating--sm {
+  --rating-font-size: 0.75rem;
+  --rating-gap: 0.25rem;
+}
+ 
+.product-rating--lg {
+  --rating-font-size: 1.125rem;
+  --rating-gap: 0.5rem;
+  --rating-stars-gap: 0.2rem;
+}
+
+
 }
 
 * {

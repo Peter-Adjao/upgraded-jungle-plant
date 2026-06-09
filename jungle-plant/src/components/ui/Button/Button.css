@@ -108,6 +108,68 @@
     background: var(--secondary-hover);
 }
 
+/*ROUNDED BUTTONS*/
+
+.button-rounded-none {
+    border-radius: 0;
+}
+
+.button-rounded-sm {
+    border-radius: 4px;
+}
+
+.button-rounded-md {
+    border-radius: 8px;
+}
+
+.button-rounded-lg {
+    border-radius: 12px;
+}
+
+.button-rounded-xl {
+    border-radius: 16px;
+}
+
+
+.button-rounded-full {
+    border-radius: 9999px;
+} 
+
+.button-rounded-left {
+    border-radius: 8px 0 0 8px;
+}
+
+.button-rounded-right {
+    border-radius: 0 8px 8px 0;
+}
+
+/*CART VARIANT*/
+.button-cart {
+    background-color: var(--color-secondary);
+    color: var(--white);
+
+    border: none;
+    border-radius: 50%;
+    
+    
+    transition: 
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.button-cart:hover {
+    background-color: var(--secondary-hover);
+    color: #111;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transform: scale(1.1);
+}
+
+.button-cart:active {
+    transform: scale(0.95);
+}
+
+
+/*
 .subscribe-button {
     background: linear-gradient(
         90deg,
@@ -120,10 +182,10 @@
 }
 
 .subscribe-button:hover {
-    background: linear-gradient(90deg, #7bc000, #adf724); /* reversed gradient */
-    color: white; /* text turns white */
-    transform: scale(1.05); /* slightly enlarges */
-}
+    background: linear-gradient(90deg, #7bc000, #adf724); 
+    color: white; 
+    transform: scale(1.05);
+}*/
 
 
 /*SIZES*/
@@ -153,4 +215,9 @@
     height: 60px;
     padding: 1rem 2rem;
     font-size: 1.25rem;
+}
+
+.button-cart-icon {
+    width: 44px;
+    height: 44px;
 }

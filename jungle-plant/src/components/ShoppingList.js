@@ -1,7 +1,7 @@
 "use client"
 import { useState } from 'react';
 import { plantList } from '../datas/plantList';
-import PlantCard from './PlantCard';
+import PlantCard from '@/components/PlantCard/PlantCard';
 import Categories from './Categories';
 import "../styles/ShoppingList.css";
 
@@ -48,7 +48,7 @@ function ShoppingList({ cart, updateCart }) {
 						<div key={plant.id}>
 							<PlantCard 
 							key={plant.id}
-							{...plant} 
+							plant={plant}
 							addToCart={addToCart}
 							/>
 						</div>

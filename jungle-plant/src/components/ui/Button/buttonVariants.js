@@ -18,6 +18,18 @@ export function buttonVariants({
             success: "button-success",
             warning: "button-warning",
             subscribe: "button-subscribe",
+            cart: "button-cart",
+        };
+
+        const rounded = {
+            none: "button-rounded",
+            sm: "button-rounded-sm",
+            md: "button-rounded-md",
+            lg: "button-rounded-lg",
+            full: "button-rounded-full",
+
+            left: "button-rounded-left",
+            right: "button-rounded-right",
         };
 
         const sizes = {
@@ -26,6 +38,8 @@ export function buttonVariants({
             lg: "button-lg",
             icon: "button-icon",
             xl: "button-xl",
+
+            cart: "button-cart-icon",
         };
 
         return cn(

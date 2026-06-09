@@ -47,14 +47,21 @@
 	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-.plantcard-subsection {
+
+.plantcard-subsection-container {
+	margin: 0.2rem 0.3rem 0.3rem 0.3rem;
+}
+
+
+.plantcard-price-subsection {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 
 .plant-name {
 	color: var(--secondary-text);
-	font-weight: 600;
+	font-weight: 650;
 } 
 
 
