@@ -1,7 +1,7 @@
 
 .footer {
 	background-color: var(--footer-bg);
-	color: white;
+	color: var(--color-white);
 	list-style: none;
 	padding: 4rem 1.5rem;
 }
@@ -13,25 +13,26 @@
 
 .footer-grid {
 	display: grid;
-	gap: 2rem;
-	margin-bottom: 3rem;
+	gap: var(--space-8);
+	margin-bottom: var(--space-12);
 }
 
-.footer-logo-text {
-	font-size: 1.25rem;
-	font-weight: 700;
+.footer-logo h2 {
+	color: var(--color-white);
+	font-size: 1.35rem;
 }
 
 .brand-description {
-	font-size: 0.9rem;
-	color: var(--footer-subtext);
+	font-size: 0.98rem;
+	font-weight:var(--weight-medium);
 	line-height: 1.6;
+	color: var(--text-muted-primary);
 }
  
 .footer-social {
 	display: flex;
-	gap: 1rem;
-	margin-top: 1rem;
+	gap: var(--space-4);
+	margin-top: var(--space-4);
 	cursor: pointer;
 }
 
@@ -48,12 +49,14 @@
 hr {
 	border: none;
 	height: 1px;
-	background:var(--hr-background); 
+	background: var(--footer-divider); 
 	margin: 2rem 0;
 }
 
-.footer-newsletter {
-	margin-top: 1rem;
+.footer-newsletter p {
+	margin-top: var(--space-4);
+	color: var(--text-muted-primary);
+	font-weight: var(--weight-medium);
 }
 
 
@@ -64,12 +67,12 @@ hr {
 
 .footer-input {
 	flex: 1;
-	padding: 0.6rem;
-	background-color: var(--input-background-color);
-	border: 1px solid var(--input-border-color);
-	border-top-left-radius: 8px;
-	border-bottom-left-radius: 8px;
-	color: var(--white); 
+	padding: 0.3rem;
+	background-color: var(--input-background);
+	border: 1px solid var(--input-border);
+	border-top-left-radius: var(--radius-md);
+	border-bottom-left-radius: var(--radius-md);
+	color: var(--color-white); 
 	cursor: pointer;
 	transition: border-color 0.3s ease;
 }
@@ -79,6 +82,7 @@ input:focus {
 	border-color: var(--input-focus);
 	box-shadow: 0 0 4px rgba(173, 168, 168, 0.9);
 	outline: none;
+	padding: 0.48rem;
 }
 
 .footer-newsletter p {
@@ -87,13 +91,15 @@ input:focus {
 
 .footer-bottom p {
 	text-align: left;
+	color: var(--text-muted-primary);
+	font-weight: var(--weight-regular);
 } 
 
 .social-container h3 {
-	font-size: 1rem;
-	margin-top: 0.8rem;
-	margin-bottom: 0.5rem;
-	font-weight: 600;
+	font-size: var(--text-base);
+	margin-top: var(--space-2);
+	margin-bottom: var(--space-2);
+	font-weight: var(--weight-semibold);
 }
 
 

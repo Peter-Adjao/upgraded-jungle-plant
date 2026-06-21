@@ -1,6 +1,6 @@
 .jh-cart {
-	color: var(--white);
-	background-color: var(--cart-bg);
+	color: var(--color-white);
+	background-color: green;
 	padding: var(--spacing);
 	display: flex;
 	flex-direction: column;
@@ -11,8 +11,8 @@
 .jh-cart-add-button {
 	margin-left: var(--spacing);
 	cursor: pointer;
-	color: var(--white);
-	transition: var(--transition-fast);
+	color: var(--color-white);
+	transition: var(--duration-fast);
 }
 
 .jh-cart-add-button:hover {
@@ -23,7 +23,7 @@
 .jh-cart-toggle-button {
 	width: 100%;
 	line-height: 1.5;
-	background: var(--white);
+	background: var(--color-white);
 	border-radius: 6px;
 	border: none;
 	color: #374151;
@@ -40,7 +40,7 @@ ul li {
 }
 
 .cart__clear {
-	color: #374151;
+	color: var(--color-white);
 	font-weight: 600;
 	padding: 0.6rem 1rem;
 	border-radius: 6px;
@@ -48,13 +48,13 @@ ul li {
 	margin: 3rem 0; 
 	width: 100%;
 	cursor: pointer;
-	background: var(--white);
+	background: var(--color-white);
 	transition: all 0.25s ease;
 }
 
 .cart__clear:hover {
-	background-color: #adf724;
-	color: white;
+	background-color: #9ce21a;
+	color: var(--color-white);
 }
 
 .cart__clear:active {
@@ -63,5 +63,5 @@ ul li {
 
 .jh-cart-toggle-button:hover {
 	background-color: #adf724;
-	color: white;
+	color: #374151;
 }

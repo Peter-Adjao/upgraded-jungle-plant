@@ -1,23 +1,23 @@
 
 
 .footer-section h3 {
-    margin-bottom: 1rem;
     font-size: 1rem;
-    font-weight: 600;
+    color: var(--color-white);
 }
 
 .footer-section a {
     display: block;
     margin-bottom: 0.75rem;
     font-size: 0.9rem;
-    color: var(--footer-subtext);
+    font-weight: var(--weight-regular);
+    color: var(--text-muted-primary);
     text-decoration: none;
     transition: var(--transition-normal);
 
 }
 
 .footer-section a:hover {
-    color: var(--white);
+    color: var(--color-white);
     text-decoration: underline;
 }
 
@@ -25,4 +25,10 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
+}
+
+
+.footer-links {
+padding: 0;
+margin: 0; 
 }

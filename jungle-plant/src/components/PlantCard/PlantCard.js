@@ -2,11 +2,12 @@
 
 import Image from 'next/image';
 // import CareScale from './CareScale';
-import { Heart, ShoppingCart, Star } from 'lucide-react';
+import { ShoppingCart } from 'lucide-react';
 import { formatCurrency } from "@/utils/format";
 import Button from "@/components/ui/Button";
 import ProductRating from "./ProductRating";
-import '@/styles/PlantCard.css'
+import WishlistButton from "@/components/WishlistButton";
+import './PlantCard.css'
 
 
 
@@ -31,6 +32,9 @@ function PlantCard({ plant, addToCart }) {
 					fill
 					className='plant-card-image'
 				/>
+				 <WishlistButton
+				 	product={plant}
+				 />
 				 {bestSale && <div className="card-sales-badge">Sales</div>}
 			</div>
 
@@ -45,15 +49,16 @@ function PlantCard({ plant, addToCart }) {
 					 </div> */}
 
 						{/* Price and Add to Cart Section */}
-						<div className="plantcard-price-subsection">
+						<div className="plantcard-price-container">
 							<div className="price-section">
 								<span  className="original-price">{formatCurrency(price)}</span>
 							</div>
 							<div className="button-section">
 								<Button 
+								className="button-cart"
 								onClick={() => addToCart(name, price)}
 								variant="cart"
-								size="cart"
+								size="cart_default"
 								rounded="full"
 								role="button"
 								aria-label={`View detail for ${name}`}
@@ -65,7 +70,6 @@ function PlantCard({ plant, addToCart }) {
 						<ProductRating 
 							rating={rating}
 							reviewCount={reviewCount}
-			
 						/>
 					</div>
 		</li>

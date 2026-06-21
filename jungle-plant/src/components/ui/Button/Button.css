@@ -20,39 +20,39 @@
 /*VARIANTS*/
 
 .button-default {
-    background: black;
-    color: white;
+    background: var(--color-black);
+    color: var(--color-white);
 }
 
 .button-default:hover {
-    background: #222;
+    background: var(--button-default-hover);
 }
 
 .button-outline {
-    border: 1px solid #d1d5db;
-    background: white;
-    color: black;
+    border: 1px solid var(--color-gray-300);
+    background: var(--color-white);
+    color: var(--text-primary);
 }
 
 .button-outline:hover {
-    background: #f3f4f6;
+    background: var(--button-outline);
 }
 
 .button-secondary {
-    background: #e5e7eb;
+    background: var(--button-secondary);
 }
 
 .button-secondary:hover {
-    background: #d1d5db;
+    background: var(--button-secondary-hover);
 }
 
 .button-destructive {
-    background: #dc2626;
-    color: white;
+    background: var(--color-error);
+    color: var(--color-white);
 }
 
 .button-destructive:hover {
-    background: #b91c1c;
+    background: var(--color-error-hover);
 }
 
 .button-ghost {
@@ -60,12 +60,12 @@
 }
 
 .button-ghost:hover {
-    background: #f3f4f6;
+    background: var(--color-gray-100);
 }
 
 .button-link{
     background: transparent;
-    color: blue;
+    color: var(--color-primary-link);
 }
 
 .button-link:hover {
@@ -73,40 +73,42 @@
 }
 
 .button-success {
-    background-color: green;
-    color: white; 
+    background-color: var(--color-success);
+    color: var(--color-white); 
 }
 
 .button-success:hover {
-    background-color: darkgreen;
+    background-color: var(--color-success-hover);
 }
 
 .button-warning {
-    background-color: orange;
-    color: white;
+    background-color: var(--color-warning-hover);
+    color: var(--color-white);
 }
 
 .button-warning:hover {
-    background-color: darkorange;
+    background-color: var(--color-warning);
 }
 
 .button-subscribe {
-    background-color: var(--color-secondary);
-    color: var(--white);
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    background-color: var(--color-brand-primary);
+    color: var(--color-white);
+    padding-left: var(--space-6);
+    padding-right: var(--space-6);
     border: none;
     font-size: 0.9rem;
-    font-weight: 600;
-    border-radius: 0 8px 8px 0;
+    font-weight: var(--weight-semibold);
+    
     
     transition: all 0.2s ease;
     cursor: pointer;
  }
 
+
 .button-subscribe:hover {
-    background: var(--secondary-hover);
+    background: var(--color-brand-secondary);
 }
+
 
 /*ROUNDED BUTTONS*/
 
@@ -115,25 +117,27 @@
 }
 
 .button-rounded-sm {
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
 }
 
 .button-rounded-md {
-    border-radius: 8px;
+    border-radius: var(--radius-md);
 }
 
 .button-rounded-lg {
-    border-radius: 12px;
+    border-radius: var(--radius-lg);
 }
 
 .button-rounded-xl {
-    border-radius: 16px;
+    border-radius: var(--radius-xl);
 }
 
 
 .button-rounded-full {
-    border-radius: 9999px;
+    border-radius: var(--radius-full);
 } 
+
+
 
 .button-rounded-left {
     border-radius: 8px 0 0 8px;
@@ -143,49 +147,49 @@
     border-radius: 0 8px 8px 0;
 }
 
-/*CART VARIANT*/
+/* BUTTON CART VARIANT*/
 .button-cart {
-    background-color: var(--color-secondary);
-    color: var(--white);
+    background-color: var(--color-brand-primary);
+    color: var(--color-white);
 
     border: none;
     border-radius: 50%;
-    
     
     transition: 
     background-color 0.2s ease,
     transform 0.2s ease,
     box-shadow 0.2s ease;
 }
+
 .button-cart:hover {
-    background-color: var(--secondary-hover);
-    color: #111;
+    background-color: var(--color-brand-secondary);
+    color: var(--text-primary);
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     transform: scale(1.1);
 }
 
-.button-cart:active {
-    transform: scale(0.95);
+
+
+/*Button Wishlist Variant*/
+
+.button-wishlist {
+    position: absolute;
+    top: 9px;
+    right: 3px;
+
+    background-color: var(--bg-base);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),
+                0 4px 6px -2px rgba(0,0,0,0.5);
+    transition: all 0.2s ease;
+    color: var(--text-tertiary);
+    cursor: pointer;
 }
 
+.button-wishlist:hover {
+    color: var(--color-favorite);
+    transform: scale(1.10);
 
-/*
-.subscribe-button {
-    background: linear-gradient(
-        90deg,
-        #adf724,
-        #7bc000,
-    );
-
-    color: #111;
-    font-weight: 700;
 }
-
-.subscribe-button:hover {
-    background: linear-gradient(90deg, #7bc000, #adf724); 
-    color: white; 
-    transform: scale(1.05);
-}*/
 
 
 /*SIZES*/
@@ -220,4 +224,9 @@
 .button-cart-icon {
     width: 44px;
     height: 44px;
+}
+
+.button-wished {
+    width: 2.3rem;
+    height: 2.3rem;
 }

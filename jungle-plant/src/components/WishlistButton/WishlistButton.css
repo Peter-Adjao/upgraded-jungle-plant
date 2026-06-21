@@ -1,0 +1,23 @@
+
+/* .wishlist-button {
+     position: absolute;
+    top: 12px;
+    right: 5px;
+    z-index: 10;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+} */
+
+/* .wishlist-icon {
+    
+    color: #6b7280;
+    transition: all 0.2s ease;
+} */
+
+.wishlist-active .wishlist-icon {
+    color: #ef4444;
+    fill: currentColor;
+}
+

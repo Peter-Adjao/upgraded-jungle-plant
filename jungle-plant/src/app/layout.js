@@ -1,5 +1,5 @@
-import "../styles/globals.css";
-// import "@/styles/Layout.css";
+import { WishlistProvider } from "@/context/WishlistContext";
+import "@/styles/globals.css";
 
 
 export const metadata = {
@@ -11,7 +11,9 @@ export default function RootLayout({ children}) {
     return (
         <html lang="en">
             <body>
+                <WishlistProvider>
                 <main>{children}</main>
+                </WishlistProvider>
             </body>
 
         </html>

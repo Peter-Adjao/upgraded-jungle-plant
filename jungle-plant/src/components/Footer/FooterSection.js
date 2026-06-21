@@ -1,5 +1,5 @@
 import React from "react";
-import "@/styles/FooterSection.css"
+import "./FooterSection.css"
 
 /**
  * @param {{ title: string, links: { label: string, href: string }[] }} props

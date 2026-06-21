@@ -5,7 +5,7 @@ import FooterSection from "./FooterSection";
 import { footerSections } from "./footer.config";
 import { FaFacebook, FaInstagram, FaXTwitter, FaYoutube } from "react-icons/fa6";
 import Button from "@/components/ui/Button";
-import "@/styles/Footer.css";
+import "./Footer.css";
 
 
 export default function Footer() {
@@ -35,10 +35,10 @@ export default function Footer() {
           <div className="footer-brand">
 
             <div className="footer-logo">
-              <h2 className="footer-logo-text">Jungle House</h2>
+              <h2>Jungle House</h2>
             </div>
 
-            <p className="footer-description">
+            <p className="brand-description">
               Bringing Nature Home
             </p>
 
@@ -55,9 +55,10 @@ export default function Footer() {
                             onBlur={handleBlur}
                             className="footer-input"
                           />
-                          <Button  size="lg"
+                          <Button 
+                           size="lg"
                            variant="subscribe"
-                           className="subscribe button"
+                           rounded="right"
                            >
                             Subscribe
                           </Button>

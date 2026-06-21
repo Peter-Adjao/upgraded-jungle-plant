@@ -1,8 +1,9 @@
 import {  cn } from "@/utils/cn";
 
 export function buttonVariants({
-    variant = "dafault",
+    variant = "default",
     size = "default",
+    rounded = "md",
     className = "",
     } = {}) {
         const base  = 
@@ -10,7 +11,7 @@ export function buttonVariants({
 
         const variants = {
             default: "button-default",
-            outline: "button-oline",
+            outline: "button-outline",
             destructive: "button-destructive",
             secondary: "button-secondary",
             ghost: "button-ghost",
@@ -18,16 +19,18 @@ export function buttonVariants({
             success: "button-success",
             warning: "button-warning",
             subscribe: "button-subscribe",
+
             cart: "button-cart",
+            wishlist: "button-wishlist"
         };
 
-        const rounded = {
-            none: "button-rounded",
+        const roundedVariants = {
+            none: "button-rounded-none",
             sm: "button-rounded-sm",
             md: "button-rounded-md",
             lg: "button-rounded-lg",
             full: "button-rounded-full",
-
+        
             left: "button-rounded-left",
             right: "button-rounded-right",
         };
@@ -39,12 +42,14 @@ export function buttonVariants({
             icon: "button-icon",
             xl: "button-xl",
 
-            cart: "button-cart-icon",
+            cart_default: "button-cart-icon",
+            wishlist_default: "button-wished",
         };
 
         return cn(
             base,
-            variants[variant],
+            variants[variant] ?? variants.default,
+            roundedVariants[rounded],
             sizes[size],
             className
         );
