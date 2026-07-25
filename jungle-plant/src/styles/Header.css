@@ -1,4 +1,4 @@
-.jh-banner {
+.jh-header {
     color: var(--text-primary);
     text-align: right;
     padding: 2rem;
@@ -11,6 +11,10 @@
     position: sticky;
     top: 0;
     z-index: 10;
+}
+
+h1 {
+    text-shadow: 0.55rem 0.55rem #11af82;
 }
 
 

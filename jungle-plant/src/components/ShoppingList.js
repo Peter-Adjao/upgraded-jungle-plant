@@ -32,30 +32,33 @@ function ShoppingList({ cart, updateCart }) {
 	}
 
 	return (
-		<div className="jh-shopping-list">
+		<main className="shopping__page">
+			<div className="jh-shopping-list">
 
-			{/* Category filter */}
-			<Categories
-				categories={categories}
-				activeCategory={activeCategory}
-				setActiveCategory={setActiveCategory}
-			/>
+				{/* Category filter */}
+				<Categories
+					categories={categories}
+					activeCategory={activeCategory}
+					setActiveCategory={setActiveCategory}
+				/>
 
-			{/* Plant list */}
-			<ul className="jh-plant-list">
-				{plantList.map((plant) =>
-					!activeCategory || activeCategory === plant.category ? (
-						<div key={plant.id}>
+				{/* Plant list */}
+				<ul className="jh-plant-list">
+					{plantList
+						.filter(
+							plant =>
+								!activeCategory || activeCategory === plant.category 
+						)
+						.map(plant => (
 							<PlantCard 
-							key={plant.id}
-							plant={plant}
-							addToCart={addToCart}
-							/>
-						</div>
-					) : null
-				)}
-			</ul>
-		</div>
+								key={plant.id}
+								plant={plant}
+								addToCart={addToCart}
+								/>
+					))}
+				</ul>
+			</div>
+		</main>
 	)
 }
 

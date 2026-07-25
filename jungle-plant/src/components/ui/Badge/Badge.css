@@ -15,13 +15,13 @@
 }
 
 .badge-default {
-    background: #f3f4f6;
+    background: var(--bg-muted);
 }
 
 
 .badge-primary {
-    background: var(--art-bg);
-    color: white;
+    background: var(--color-primary);
+    color: var(--color-white);
 }
 
 /*SUCCESS*/

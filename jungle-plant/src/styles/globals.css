@@ -34,7 +34,7 @@ body {
   line-height: var(--leading-normal);
 
   color: var(--text-primary);
-  background-color: var(--bg-base);
+  background-color: var(--bg-contrast);
 
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -88,7 +88,7 @@ h6 {
 
 p {
   color: var(--text-secondary);
-  max-width: 65ch;
+  max-width: 80ch;
 }
 
 /* 
@@ -139,7 +139,7 @@ ol[role="list"] {
 
 ul,
 ol {
-  padding-left: 1.5rem;
+  padding-left: 0;
 }
 
 /* 

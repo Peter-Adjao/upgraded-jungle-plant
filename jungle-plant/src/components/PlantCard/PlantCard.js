@@ -24,11 +24,11 @@ function PlantCard({ plant, addToCart }) {
   } = plant;
   
 	return (
-		<li className='plant-card' >
-			<div className='plant-card-image-container'>
+		<article className='plant-card' >
+			<figure className='plant-card-image-container'>
 				<Image
 					src={cover}
-					alt={`${name} image`}
+					alt={`${plant.name} plant`}
 					fill
 					className='plant-card-image'
 				/>
@@ -36,7 +36,7 @@ function PlantCard({ plant, addToCart }) {
 				 	product={plant}
 				 />
 				 {bestSale && <div className="card-sales-badge">Sales</div>}
-			</div>
+			</figure>
 
 					<div className="plantcard-subsection-container">
 
@@ -51,7 +51,7 @@ function PlantCard({ plant, addToCart }) {
 						{/* Price and Add to Cart Section */}
 						<div className="plantcard-price-container">
 							<div className="price-section">
-								<span  className="original-price">{formatCurrency(price)}</span>
+								<p  className="original-price">{formatCurrency(price)}</p>
 							</div>
 							<div className="button-section">
 								<Button 
@@ -61,7 +61,7 @@ function PlantCard({ plant, addToCart }) {
 								size="cart_default"
 								rounded="full"
 								role="button"
-								aria-label={`View detail for ${name}`}
+								aria-label={`Add ${plant.name} to cart`}
 								>
 									<ShoppingCart />
 								</Button>
@@ -72,7 +72,7 @@ function PlantCard({ plant, addToCart }) {
 							reviewCount={reviewCount}
 						/>
 					</div>
-		</li>
+		</article>
 	)
 }
 
