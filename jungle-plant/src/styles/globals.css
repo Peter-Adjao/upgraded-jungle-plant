@@ -89,6 +89,7 @@ h6 {
 p {
   color: var(--text-secondary);
   max-width: 80ch;
+  line-height: var(--leading-relaxed);
 }
 
 /* 
@@ -183,6 +184,7 @@ input,
 textarea,
 select {
   font: inherit;
+   line-height: var(--leading-normal);
 }
 
 textarea {

@@ -13,6 +13,7 @@ export function buttonVariants({
             default: "button-default",
             outline: "button-outline",
             destructive: "button-destructive",
+            primary: "button-primary",
             secondary: "button-secondary",
             ghost: "button-ghost",
             link: "button-link",
@@ -38,6 +39,7 @@ export function buttonVariants({
         const sizes = {
             default: "button-default-size",
             sm: "button-sm",
+            md: "button-md",
             lg: "button-lg",
             icon: "button-icon",
             xl: "button-xl",

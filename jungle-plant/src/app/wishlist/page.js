@@ -30,14 +30,29 @@ function PageHeader () {
 
 
 function EmptyState () {
-    return ( 
-        <section className="wishlist__empty">
-            <HeartOff className="wishlist__empty-icon" />
-            <h3 className="wishlist__empty-title">Your wishlist is empty</h3>
-            <p className="wishlist__empty-text">
-                Save your favorite plants and they will appear here.
-            </p>
-        </section>
+    return (
+        <article className="wishlist__empty__page"> 
+            <section className="wishlist__empty__content__wrapper">
+                <figure className="wishlist__empty__icon__wrapper">
+                    <HeartOff className="wishlist__empty__icon" />
+                </figure>                <h3 className="wishlist__empty-title">Your wishlist is empty!</h3>
+                <p className="wishlist__empty-text">
+                    Found a plant you like? Tap on the heart shaped icon at the top-right corner
+                    on a plant to add it to your wishlist.
+                     Save your favorite plants and they will appear here. 
+                </p>
+                <div className="continue__shopping-wrapper">
+                <Button 
+                    className="continue__shopping"
+                    variant="primary"
+                    size="md"
+                    rounded="sm"
+                    >
+                    Continue shopping
+               </Button>
+            </div>
+            </section>    
+        </article>
     );
 }
 

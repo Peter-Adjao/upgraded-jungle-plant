@@ -3,7 +3,7 @@
 import Button from "@/components/ui/Button";
 import { useWishlist } from "@/context/WishlistContext";
 import { formatCurrency } from "@/utils/format";
-import { Trash2 } from "lucide-react";
+import { Trash2, ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import "@/styles/WishlistItem.css";
 
@@ -26,36 +26,41 @@ export default function WishlistItem({ plant }) {
                     className="wishlist-item-image-content"
                 />
             </figure>
-            <section className="wishlist-item-content">
-                <h3>{plant.name}</h3>
-                <p  className="product-price">
-                    {formatCurrency(plant.price)}
-                    </p>
+                    <section className="wishlist-item-content-wrapper">
+                        <h3>{plant.name} coming from the plant</h3>
+                        <section className="wishlist-item-content">
+                            <div className="wishlist-item-price-section">
+                                <p  className="product-price">
+                                    {formatCurrency(plant.price)}
+                                </p>
+                                <h5>Me now</h5>
+                            </div>
+                            <footer className="wishlist-item-actions">
+                            <Button
+                                variant="primary"
+                                size="sm"
+                                rounded="sm"
+                                aria-label={`Add ${plant.name} to cart`}
+                                >
+                                Add to cart
+                            </Button> 
 
-                    <footer className="wishlist-item-actions">
-                        {/* <BUtton
-                            variant="Ghost"
-                            size="lg"
-                            rounded="md"
-                            aria-label={`Add ${plant.name} to wishlist`}
+                            <Button
+                            variant="ghost"
+                            size="sm"
+                            rounded="sm"
+                            aria-label={`Remove ${plant.name} from wishlist`}
+                            className="wishlist-remove-button"
+                            onClick={handleRemoveWishlistItem}
                             >
-                            <ShoppingCart />
-                            Add to cart
-                        </Button> */}
+                            Remove
+                            </Button>
+                        </footer>
 
-                        <Button
-                        variant="ghost"
-                        size="sm"
-                        aria-label={`Remove ${plant.name} from wishlist`}
-                        className="wishlist-remove-button"
-                        onClick={handleRemoveWishlistItem}
-                        >
-                            <Trash2 />
-                             Remove
-                        </Button>
-                    </footer>
-            </section>
 
+                        </section>
+                        
+                 </section>
         </article>
     )
 }
