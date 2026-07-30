@@ -17,23 +17,23 @@ export default function WishlistItem({ plant }) {
 
     return (
         <article className="wishlist-item-card">
-            <figure className="wishlist-item-image">
+            <figure className="wishlist-item-image-wrapper">
                 <Image 
                     src={plant.cover}
                     alt={plant.name}
                     fill                    
                     sizes="140px"
-                    className="wishlist-item-image-content"
+                    className="wishlist-item-image"
                 />
             </figure>
                     <section className="wishlist-item-content-wrapper">
-                        <h3>{plant.name} coming from the plant</h3>
+                        <h3 className="wishlist-item-name">{plant.name}</h3>
                         <section className="wishlist-item-content">
                             <div className="wishlist-item-price-section">
-                                <p  className="product-price">
+                                <p  className="wishlist-item-price">
                                     {formatCurrency(plant.price)}
                                 </p>
-                                <h5>Me now</h5>
+
                             </div>
                             <footer className="wishlist-item-actions">
                             <Button
@@ -46,7 +46,7 @@ export default function WishlistItem({ plant }) {
                             </Button> 
 
                             <Button
-                            variant="ghost"
+                            variant="delete"
                             size="sm"
                             rounded="sm"
                             aria-label={`Remove ${plant.name} from wishlist`}

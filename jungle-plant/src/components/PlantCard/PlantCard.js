@@ -41,7 +41,7 @@ function PlantCard({ plant, addToCart }) {
 					<div className="plantcard-subsection-container">
 
 						{/*Product name*/}
-						<h4 className='plant-name'>{name}</h4>
+						<h3 className='plant-name'>{plant.name}</h3>
 
 					  {/* <div className='lmj-care-icons'>
 						<CareScale careType='water' care={water} />
@@ -51,7 +51,7 @@ function PlantCard({ plant, addToCart }) {
 						{/* Price and Add to Cart Section */}
 						<div className="plantcard-price-container">
 							<div className="price-section">
-								<p  className="original-price">{formatCurrency(price)}</p>
+								<p  className="plant-price">{formatCurrency(price)}</p>
 							</div>
 							<div className="button-section">
 								<Button 

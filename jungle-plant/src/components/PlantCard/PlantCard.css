@@ -3,7 +3,6 @@
 	
 	display: flex;
 
-	/* min-width: 200px; */
 	justify-content: center;
 	flex-direction: column;
 	text-transform: capitalize;
@@ -18,22 +17,20 @@
 .plant-card-image-container {
 	height: 200px;
 	width: 100%;
-	border-radius: 20px;
+	border-top-right-radius: var(--radius-md);
+	border-top-left-radius: var(--radius-md);
 	position: relative;
 	overflow:hidden;
 }
 
 .plant-card-image {
-	height: auto;
-	width: 100%;
-	border-radius: 20px;
 	object-fit: cover;
 	display: block;
   	transition: transform 0.3s ease-in-out;
 
 }
 
-.plant-card-image-container:hover .plant-card-image {
+.plant-card-image:hover {
 	transform:scale(1.20);
 	cursor: pointer;
 }
@@ -63,19 +60,23 @@
 
 .plantcard-price-container {
 	display: flex;
-	justify-content: space-between;
+	/* justify-content: space-between; */
 	align-items: center;
 }
 
 .plant-name {
-	color: var(--text-secondary);
-	font-weight: var(--weight-semibold);
+	color: var(--color-gray-800);
+	font-weight: var(--weight-regular);
+	font-size: var(--text-lg);
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 } 
 
 
-.original-price {
+.plant-price {
 	color: var(--text-primary);
-	font-size: var(--space-5);
+	font-size: var(--text-xl);
 	font-weight: var(--weight-semibold);
 }
 
@@ -84,3 +85,6 @@
 }
 
 
+.button-section {
+	margin-left: auto;
+}

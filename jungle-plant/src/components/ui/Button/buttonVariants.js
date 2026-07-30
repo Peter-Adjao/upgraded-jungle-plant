@@ -20,6 +20,7 @@ export function buttonVariants({
             success: "button-success",
             warning: "button-warning",
             subscribe: "button-subscribe",
+            delete: "button-delete",
 
             cart: "button-cart",
             wishlist: "button-wishlist"
