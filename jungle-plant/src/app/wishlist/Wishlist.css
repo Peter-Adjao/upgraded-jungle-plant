@@ -125,3 +125,27 @@
     margin-top: var(--space-8);
 }
 
+
+.wishlist-loading-wrapper {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    width:100%;
+    max-width: 900px;
+    margin-inline: auto;
+
+    height: 450px;
+    margin-bottom: var(--space-4);
+    background-color: var(--color-white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+}
+
+.wishlist-loading {
+    font-size: var(--text-xl);
+    font-weight: var(--weight-semibold);
+}

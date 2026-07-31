@@ -58,9 +58,20 @@ function EmptyState () {
 
 
 export default function WishlistPage() {
-    const { wishlist } = useWishlist();
+    const { wishlist, isLoaded } = useWishlist();
 
     const isEmpty = wishlist.length === 0;
+    
+    if (!isLoaded) {
+        return <>
+            <PageHeader />
+            <div className="wishlist-loading-wrapper">
+                <p className="wishlist-loading">
+                Loading your wishlist...
+                </p>
+            </div>
+            </>
+    }
     
     return (
             <>

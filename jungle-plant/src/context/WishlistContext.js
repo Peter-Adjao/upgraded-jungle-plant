@@ -1,6 +1,6 @@
 "use client"
 
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 
 
@@ -9,6 +9,21 @@ const WishlistContext = createContext();
 
 export function WishlistProvider({children}) {
     const [wishlist, setWishlist] = useState([]);
+    const [isLoaded, setIsLoaded] = useState(false);
+
+    //Load saved wishlist from localstorage once, when the app fisrt mounts
+    useEffect(() => {
+        const stored = localStorage.getItem("wishlist");
+        if(stored) setWishlist(JSON.parse(stored));
+        setIsLoaded(true);
+    }, []);
+
+    // Save wisshlist to localStorage whenever it changes (after initial load)
+    useEffect(() => {
+        if (isLoaded) {
+            localStorage.setItem("wishlist", JSON.stringify(wishlist));
+        }
+    }, [wishlist, isLoaded]);
     
 
     const isWishlisted = (id) => {
@@ -50,6 +65,7 @@ export function WishlistProvider({children}) {
         <WishlistContext.Provider
             value={{
                 wishlist,
+                isLoaded,
                 isWishlisted,
                 addToWishlist,
                 removeFromWishlist,

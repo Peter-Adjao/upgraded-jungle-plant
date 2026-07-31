@@ -17,7 +17,7 @@ export default function WishlistItem({ plant }) {
 
     return (
         <article className="wishlist-item-card">
-            <figure className="wishlist-item-image-wrapper">
+            <div className="wishlist-item-image-wrapper">
                 <Image 
                     src={plant.cover}
                     alt={plant.name}
@@ -25,10 +25,10 @@ export default function WishlistItem({ plant }) {
                     sizes="140px"
                     className="wishlist-item-image"
                 />
-            </figure>
-                    <section className="wishlist-item-content-wrapper">
+            </div>
+                    <div className="wishlist-item-content-wrapper">
                         <h3 className="wishlist-item-name">{plant.name}</h3>
-                        <section className="wishlist-item-content">
+                        <div className="wishlist-item-content">
                             <div className="wishlist-item-price-section">
                                 <p  className="wishlist-item-price">
                                     {formatCurrency(plant.price)}
@@ -58,9 +58,9 @@ export default function WishlistItem({ plant }) {
                         </footer>
 
 
-                        </section>
+                        </div>
                         
-                 </section>
+                 </div>
         </article>
     )
 }
