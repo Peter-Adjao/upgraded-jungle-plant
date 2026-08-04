@@ -17,7 +17,7 @@
 } */
 
 .wishlist-active .wishlist-icon {
-    color: #ef4444;
+    color: var(--color-destructive);
     fill: currentColor;
 }
 

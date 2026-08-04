@@ -18,7 +18,7 @@ export default function WishlistButton({ product }) {
         <Button 
             type="button"
             variant="wishlist"
-            size="wishlist_default"
+            size="icon-lg"
             rounded="full"
             className={`wishlist-button ${
                 wished ? "wishlist-active" : ""}`}
@@ -30,6 +30,7 @@ export default function WishlistButton({ product }) {
             }
         >
             <Heart
+                aria-hidden="true"
                 className="wishlist-icon"
             />
         </Button>

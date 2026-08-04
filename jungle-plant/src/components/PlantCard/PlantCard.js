@@ -58,12 +58,11 @@ function PlantCard({ plant, addToCart }) {
 								className="button-cart"
 								onClick={() => addToCart(name, price)}
 								variant="cart"
-								size="cart_default"
+								size="icon-lg"
 								rounded="full"
-								role="button"
 								aria-label={`Add ${plant.name} to cart`}
 								>
-									<ShoppingCart />
+									<ShoppingCart aria-hidden="true"/>
 								</Button>
 							</div>
 				        </div>

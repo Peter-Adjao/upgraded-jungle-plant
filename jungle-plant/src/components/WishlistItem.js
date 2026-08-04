@@ -6,6 +6,7 @@ import { formatCurrency } from "@/utils/format";
 import { Trash2, ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import "@/styles/WishlistItem.css";
+import ProductRating from "@/components/PlantCard/ProductRating"
 
 export default function WishlistItem({ plant }) {
 
@@ -29,31 +30,34 @@ export default function WishlistItem({ plant }) {
                     <div className="wishlist-item-content-wrapper">
                         <h3 className="wishlist-item-name">{plant.name}</h3>
                         <div className="wishlist-item-content">
-                            <div className="wishlist-item-price-section">
+                            <div className="wishlist-item__price-section">
+                                <ProductRating 
+                                    rating={plant.rating}
+                                    reviewCount={plant.reviewCount}
+                                />
                                 <p  className="wishlist-item-price">
                                     {formatCurrency(plant.price)}
                                 </p>
-
                             </div>
                             <footer className="wishlist-item-actions">
                             <Button
                                 variant="primary"
-                                size="sm"
-                                rounded="sm"
-                                aria-label={`Add ${plant.name} to cart`}
+                                size="special"
+                                rounded="md"
+                                className="wishlist-add-to-cart-button"
                                 >
-                                Add to cart
+                                Add to Cart
                             </Button> 
 
                             <Button
-                            variant="delete"
+                            variant="ghostDestructive"
                             size="sm"
                             rounded="sm"
-                            aria-label={`Remove ${plant.name} from wishlist`}
                             className="wishlist-remove-button"
+                            aria-label={`Delete ${plant.name} from wishlist`}
                             onClick={handleRemoveWishlistItem}
                             >
-                            Remove
+                            <Trash2 aria-hidden="true"/>
                             </Button>
                         </footer>
 

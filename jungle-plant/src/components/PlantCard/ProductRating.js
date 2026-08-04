@@ -11,6 +11,7 @@ function ProductRating({
 }) {
      console.log("Rating:", rating);
      console.log("reviewCount:", reviewCount);
+     
     //Clamp rating to valid range, then round to the nearest 0.5
     const clampedRating = Math.min(maxStars, Math.max(0, rating));
     const  roundedRating = Math.round(clampedRating * 2) /2;

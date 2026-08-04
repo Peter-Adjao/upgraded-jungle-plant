@@ -2,7 +2,7 @@ import {  cn } from "@/utils/cn";
 
 export function buttonVariants({
     variant = "default",
-    size = "default",
+    size = "md",
     rounded = "md",
     className = "",
     } = {}) {
@@ -12,15 +12,16 @@ export function buttonVariants({
         const variants = {
             default: "button-default",
             outline: "button-outline",
-            destructive: "button-destructive",
             primary: "button-primary",
             secondary: "button-secondary",
             ghost: "button-ghost",
+            ghostDestructive: "button-ghost-destructive",
+            destructive: "button-destructive",
+
             link: "button-link",
             success: "button-success",
             warning: "button-warning",
             subscribe: "button-subscribe",
-            delete: "button-delete",
 
             cart: "button-cart",
             wishlist: "button-wishlist"
@@ -31,6 +32,7 @@ export function buttonVariants({
             sm: "button-rounded-sm",
             md: "button-rounded-md",
             lg: "button-rounded-lg",
+            xl: "button-rounded-xl",
             full: "button-rounded-full",
         
             left: "button-rounded-left",
@@ -39,14 +41,20 @@ export function buttonVariants({
 
         const sizes = {
             default: "button-default-size",
+            xs: "button-xs",
             sm: "button-sm",
             md: "button-md",
             lg: "button-lg",
-            icon: "button-icon",
             xl: "button-xl",
+
+            icon: "button-icon",
+            "icon-sm": "button-icon-sm",
+            "icon-lg": "button-icon-lg",
+            
 
             cart_default: "button-cart-icon",
             wishlist_default: "button-wished",
+            special: "button-special",
         };
 
         return cn(

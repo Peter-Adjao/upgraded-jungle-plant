@@ -34,7 +34,7 @@
 
 /*Destructive*/
 .badge-destructive {
-    background: var(--color-error);
+    background: var(--color-destructive-hover);
     color: var(--color-white);
 }
 
@@ -45,7 +45,7 @@
 
     padding: 0 var(--space-1);
 
-    background: var(--color-error);
+    background-color: var(--color-destructive-hover);
 
     color: var(--color-white);
 

@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Header from "@/components/Header";
 import Cart from "@/components/Cart";
 import ShoppingList from "../components/ShoppingList";
-import Footer from "@/components/Footer/Footer";
+import Footer from "@/components/Footer";
 import "../styles/Page.css";
 
 
@@ -17,7 +17,7 @@ export default function HomePage() {
                 <ShoppingList cart={cart} updateCart={updateCart} />
             </div>
         
-             <Footer/>
+             <Footer />
         </div>
     );
 }

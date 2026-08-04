@@ -14,7 +14,16 @@
     font-weight: var(--weight-medium);
 
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: 
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.button:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
 }
 
 /*VARIANTS*/
@@ -25,27 +34,35 @@
 }
 
 .button-default:hover {
-    background: var(--button-default-hover);
+    background-color: var(--button-default-hover);
 }
 
 .button-outline {
     border: 1px solid var(--color-gray-300);
-    background: var(--color-white);
+    background-color: var(--color-white);
     color: var(--text-primary);
 }
 
 .button-outline:hover {
-    background: var(--button-outline);
+    background-color: var(--button-outline);
 }
 
 .button-primary {
-    background: var(--color-primary);
+    background-color: var(--color-primary);
     color: var(--color-white);
 }
 
 .button-primary:hover {
-    background: var(--color-secondary);
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
+
+.button-primary:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-sm)
+}
+
 
 .button-secondary {
     background: var(--button-secondary);
@@ -55,14 +72,6 @@
     background: var(--button-secondary-hover);
 }
 
-.button-destructive {
-    background: var(--color-error);
-    color: var(--color-white);
-}
-
-.button-destructive:hover {
-    background: var(--color-error-hover);
-}
 
 .button-ghost {
     background: transparent;
@@ -70,6 +79,60 @@
 
 .button-ghost:hover {
     background: var(--color-gray-100);
+}
+
+.button-ghost-destructive {
+    background: transparent;
+   color: var(--color-gray-500);
+   
+   transition:
+   color var(--transition-fast),
+   background-color var(--transition-fast),
+   transform var(--transition-fast);
+}
+
+
+.button-ghost-destructive:hover {
+    background-color: var(--color-gray-100);
+    color: var(--color-destructive-hover);
+
+    transform: scale(1.05);
+}
+
+.button-ghost-destructive:active {
+    transform: scale(0.96);
+}
+
+
+.button-ghost-destructive:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+
+.button-destructive {
+    background-color: var(--color-destructive);
+    color: var(--color-white);
+
+    border: 1px solid transparent;
+}
+
+.button-destructive:hover {
+    background-color: var(--color-destructive-hover);
+}
+
+.button-destructive:active {
+    transform: scale(0.98);
+}
+
+.button-destructive:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+.button-destructive:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
 .button-link{
@@ -99,14 +162,6 @@
     background-color: var(--color-warning);
 }
 
-.button-delete {
-    background: transparent;
-}
-
-.button-delete:hover {
-    background: var(--color-error-hover);
-    color: var(--color-error);
-}
 
 .button-subscribe {
     background-color: var(--color-brand-primary);
@@ -174,15 +229,16 @@
     border-radius: var(--radius-full);
     
     transition: 
-    background-color 0.2s ease,
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+        background-color var(--transition-fast),
+        color var(--transition-fast),
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast);
 }
 
 .button-cart:hover {
     background-color: var(--color-brand-secondary);
     color: var(--color-white);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: var(--shadow-sm);
     transform: scale(1.1);
 }
 
@@ -204,7 +260,7 @@
 }
 
 .button-wishlist:hover {
-    color: var(--color-favorite);
+    color: var(--color-destructive);
     transform: scale(1.10);
 
 }
@@ -212,43 +268,53 @@
 
 /*SIZES*/
 
-.button-default-size {
-    height: 36px;
-    padding: 0.25rem 0.75rem;
+.button-xs {
+    height: 28px;
+    padding-inline: var(--space-2);
+    font-size: var(--text-xs);
 }
 
 .button-sm {
     height: 32px;
-    padding: 0.25rem 0.75rem;
+    padding-inline: var(--space-3);
+    font-size: var(--text-sm);
 }
 
 .button-md {
-    height: 38px;
-    padding: 1.75rem 1rem;
-}
-.button-lg {
-    height: 40px;
-    padding: 0.75rem 1.5rem;
+    height: 36px;
+    padding-inline: var(--space-4);
+    font-size: var(--text-sm);
+
+
 }
 
-.button-icon {
+.button-lg {
+    height: 44px;
+    padding-inline: var(--space-5);
+    font-size: var(--text-base);
+}
+
+.button-xl {
+    height: 52px;
+    padding-inline: var(--space-6);
+    font-size: var(--text-lg);
+}
+
+
+.button-icon-sm {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+}
+
+.button-icon {  
     width: 36px;
     height: 36px;
     padding: 0;
 }
 
-.button-xl {
-    height: 60px;
-    padding: 1rem 2rem;
-    font-size: 1.25rem;
-}
-
-.button-cart-icon {
+.button-icon-lg {
     width: 44px;
     height: 44px;
-}
-
-.button-wished {
-    width: 2.3rem;
-    height: 2.3rem;
+    padding: 0;
 }
