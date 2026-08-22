@@ -1,4 +1,4 @@
-
+import { Slot } from "@radix-ui/react-slot";
 import { buttonVariants } from "./buttonVariants";
 import "./Button.css";
 
@@ -9,10 +9,12 @@ export default function Button({
      size,
      rounded,
      className="",
+     asChild = false,
       ...props
     }) {
+        const Comp = asChild ? Slot : "button"; 
     return (
-            <button
+            <Comp
                 className={buttonVariants({
                     variant,
                     size,
@@ -22,7 +24,7 @@ export default function Button({
                 {...props}
             >
             {children}
-            </button>
+            </Comp>
     );
    
 }

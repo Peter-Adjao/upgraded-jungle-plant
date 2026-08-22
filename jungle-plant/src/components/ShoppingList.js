@@ -1,11 +1,13 @@
 "use client"
-import { useState } from 'react';
-import { plantList } from '../datas/plantList';
-import PlantCard from '@/components/PlantCard/PlantCard';
-import Categories from './Categories';
-import "../styles/ShoppingList.css";
 
-function ShoppingList({ cart, updateCart }) {
+import { useState } from "react";
+import { plantList } from "@/datas/plantList";
+import PlantCard from "@/components/PlantCard/PlantCard";
+import Categories from "./Categories";
+import { useCart } from "@/context/CartContext";
+import "@/styles/ShoppingList.css";
+
+function ShoppingList({plant}) {
 	// Selected category
 	const [activeCategory, setActiveCategory] = useState('')
 
@@ -14,25 +16,10 @@ function ShoppingList({ cart, updateCart }) {
 		plantList.map((plant) => plant.category)
 	)]
 
-	// Add plant to cart
-	function addToCart(name, price) {
-		const plantInCart = cart.find((plant) => plant.name === name)
-
-		if (plantInCart) {
-			updateCart(
-				cart.map((plant) =>
-					plant.name === name
-						? { ...plant, amount: plant.amount + 1 }
-						: plant
-				)
-			)
-		} else {
-			updateCart([...cart, { name, price, amount: 1 }])
-		}
-	}
-
+	const { cart, addToCart } = useCart();
+		
 	return (
-		<main className="shopping__page">
+		<div className="shopping__page">
 			<div className="jh-shopping-list">
 
 				{/* Category filter */}
@@ -58,8 +45,8 @@ function ShoppingList({ cart, updateCart }) {
 					))}
 				</ul>
 			</div>
-		</main>
-	)
+		</div>
+	);
 }
 
 export default ShoppingList;

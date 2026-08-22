@@ -1,4 +1,5 @@
 import { WishlistProvider } from "@/context/WishlistContext";
+import { CartProvider } from "@/context/CartContext";
 import "@/styles/globals.css";
 
 
@@ -11,9 +12,11 @@ export default function RootLayout({ children}) {
     return (
         <html lang="en">
             <body>
-                <WishlistProvider>
-                <main>{children}</main>
-                </WishlistProvider>
+                <CartProvider>
+                    <WishlistProvider>
+                        <main>{children}</main>
+                    </WishlistProvider>
+                </CartProvider>
             </body>
 
         </html>

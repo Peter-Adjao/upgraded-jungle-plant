@@ -62,7 +62,7 @@ function EmptyState () {
                     <Button 
                         className="empty-state__button"
                         variant="primary"
-                        size="md"
+                        size="lg"
                         rounded="md"
                         >
                         Continue shopping
@@ -99,7 +99,7 @@ export default function WishlistPage() {
     return (
         <>
             {isEmpty ? <EmptyStateHeader /> : <WishlistHeader />}
-            <main className="wishlist">
+            <div className="wishlist">
             
             {isEmpty ? (
                 
@@ -118,7 +118,7 @@ export default function WishlistPage() {
                         <footer className="wishlist__action">
                             <Button 
                             variant="ghostDestructive"
-                            size="md"
+                            size="lg"
                             rounded="md"
                             >
                                 <Trash2 aria-hidden="true"/>
@@ -128,7 +128,7 @@ export default function WishlistPage() {
                 </div>
                 
             )}
-            </main>
+            </div>
             <Footer />
         </>
     );

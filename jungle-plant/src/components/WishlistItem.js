@@ -5,8 +5,8 @@ import { useWishlist } from "@/context/WishlistContext";
 import { formatCurrency } from "@/utils/format";
 import { Trash2, ShoppingCart } from "lucide-react";
 import Image from "next/image";
+import ProductRating from "@/components/PlantCard/ProductRating";
 import "@/styles/WishlistItem.css";
-import ProductRating from "@/components/PlantCard/ProductRating"
 
 export default function WishlistItem({ plant }) {
 
@@ -42,7 +42,7 @@ export default function WishlistItem({ plant }) {
                             <footer className="wishlist-item-actions">
                             <Button
                                 variant="primary"
-                                size="special"
+                                size="lg"
                                 rounded="md"
                                 className="wishlist-add-to-cart-button"
                                 >
@@ -60,11 +60,8 @@ export default function WishlistItem({ plant }) {
                             <Trash2 aria-hidden="true"/>
                             </Button>
                         </footer>
-
-
                         </div>
-                        
                  </div>
         </article>
-    )
+    );
 }

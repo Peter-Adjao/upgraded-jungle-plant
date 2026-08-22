@@ -40,7 +40,6 @@ export function buttonVariants({
         };
 
         const sizes = {
-            default: "button-default-size",
             xs: "button-xs",
             sm: "button-sm",
             md: "button-md",

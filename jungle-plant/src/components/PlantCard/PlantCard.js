@@ -7,11 +7,12 @@ import { formatCurrency } from "@/utils/format";
 import Button from "@/components/ui/Button";
 import ProductRating from "./ProductRating";
 import WishlistButton from "@/components/WishlistButton";
+import { useCart } from "@/context/CartContext";
 import './PlantCard.css'
 
 
 
-function PlantCard({ plant, addToCart }) {
+function PlantCard({plant}) {
 	const {
     cover,
     name,
@@ -22,10 +23,18 @@ function PlantCard({ plant, addToCart }) {
     water,
     light,
   } = plant;
+
+
+  const { addToCart} = useCart();
+
+  function handleAddToCart() {
+		 addToCart(plant);
+  }
+
   
 	return (
 		<article className='plant-card' >
-			<figure className='plant-card-image-container'>
+			<div className='plant-card-image-container'>
 				<Image
 					src={cover}
 					alt={`${plant.name} plant`}
@@ -36,7 +45,7 @@ function PlantCard({ plant, addToCart }) {
 				 	product={plant}
 				 />
 				 {bestSale && <div className="card-sales-badge">Sales</div>}
-			</figure>
+			</div>
 
 					<div className="plantcard-subsection-container">
 
@@ -56,13 +65,13 @@ function PlantCard({ plant, addToCart }) {
 							<div className="button-section">
 								<Button 
 								className="button-cart"
-								onClick={() => addToCart(name, price)}
+								onClick={handleAddToCart}
 								variant="cart"
 								size="icon-lg"
 								rounded="full"
 								aria-label={`Add ${plant.name} to cart`}
 								>
-									<ShoppingCart aria-hidden="true"/>
+									<ShoppingCart aria-hidden="true" />
 								</Button>
 							</div>
 				        </div>

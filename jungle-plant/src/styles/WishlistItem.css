@@ -6,7 +6,7 @@
     
     gap: var(--space-4);
 
-    background-color: var(--white);
+    background-color: var(--bg-base);
     box-shadow: var(--shadow-sm);
     border: 1px solid var(--color-gray-300);
     border-radius: var(--radius-sm);
@@ -41,6 +41,7 @@
 .wishlist-remove-button {
     margin-left: auto;
 } 
+
 
 
 
@@ -87,6 +88,7 @@ color: var(--text-primary);
     .wishlist-item-card {
         display: flex;
 
+        padding: var(--space-4);
         flex-direction: row;
         align-items: stretch;
     }
@@ -111,6 +113,8 @@ color: var(--text-primary);
         flex-direction: column;
         flex: 1;
         min-width: 0;
+
+        padding: var(--space-0);
     }
 
     .wishlist-item-content {

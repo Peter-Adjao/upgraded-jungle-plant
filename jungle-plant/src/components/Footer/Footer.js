@@ -73,22 +73,38 @@ export default function Footer() {
                         <div className="footer-social">
                               <div className="social-icon facebook">
                                   <a href="#" aria-label="Facebook">
-                                      <FaFacebook size={25} color="white"/>
+                                      <FaFacebook 
+                                      size={25} 
+                                      color="white"
+                                      aria-hidden="true"
+                                      />
                                   </a>  
                               </div> 
                               <div className="social-icon instagram">
                                   <a href="#" aria-label="Instagram">
-                                      <FaInstagram size={25} color="white" />
+                                      <FaInstagram
+                                       size={25} 
+                                       color="white"
+                                       aria-hidden="true" 
+                                       />
                                   </a>
                               </div>
                               <div className="social-icon youtube">
                                   <a href="#" aria-label="Youtube">
-                                      <FaYoutube size={25} color="white" />
+                                      <FaYoutube 
+                                      size={25} 
+                                      color="white" 
+                                      aria-hidden="true" 
+                                      />
                                   </a>
                               </div>
                               <div className="social-icon X">
                                   <a href="#" aria-label="X">
-                                      <FaXTwitter size={25} color="white" />
+                                      <FaXTwitter
+                                      size={25} 
+                                      color="white" 
+                                      aria-hidden="true"
+                                      />
                                   </a>
                               </div>
                         </div>

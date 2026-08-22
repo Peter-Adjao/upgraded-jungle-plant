@@ -84,13 +84,16 @@
   --color-warning: #f59e0b;
   --color-warning-hover: orange;
 
+--color-destructive-50:  #fef2f2;
+--color-destructive-100: #fee2e2;
+--color-destructive-200: #fecaca;
+--color-destructive-300: #fca5a5;
  --color-destructive: #ef4444;
---color-destructive-hover: #dc2626;
---color-destructive-muted: #f5aeae;
---color-destructive-active: #b91c1c;
+ --color-destructive-hover: #dc2626;
+ --color-destructive-active: #b91c1c;
 
 
-  --color-info: #3b82f6;
+ --color-info: #3b82f6;
 
   --color-success-bg: #f0fdf4;
   --color-warning-bg: #fffbeb;

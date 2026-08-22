@@ -2,7 +2,7 @@
 
 import { useWishlist } from "@/context/WishlistContext";
 import Image from "next/image";
-import { Heart } from "lucide-react";
+import { Heart, ShoppingCart } from "lucide-react";
 import Button from "@/components/ui/Button";
 import Badge from "@/components/ui/Badge";
 import Link from "next/link";
@@ -13,38 +13,54 @@ function Header() {
     const { wishlist } = useWishlist();
     
     return (
-        <header className="jh-header">
-            <div className="jh-logo-container">
-                <Image
-                    src ="/logo.png" 
-                    alt="JUngle House Logo" className="jh-logo"
-                    width={45}
-                    height={45}
-                />
-            </div>
+            <header className="jh-header">
+                <div className="jh-logo-wrapper">
+                    <Image
+                        src ="/logo.png" 
+                        alt="Jungle house logo" 
+                        sizes="45px"
+                        fill
+                        className="jh-logo-image"
+                    />
+                </div>
                 <div>
                     <h1 className="jh-title">{title}</h1>
                 </div>
-                <nav className="wishlist-nav">
-                        <Link href="/wishlist">
-                            <Button
-                                variant="ghost"
-                                size="icon"
-                            >
-                                <Heart className="header-wishlist-icon" />
-
-                                {wishlist.length > 0 && (
-                                    <Badge 
-                                        variant="count"
-                                        className="header-count"
-                                    >
-                                        {wishlist.length}  
-                                    </Badge>
-                                )}
-                            </Button>
+                <nav className="header-nav">
+                    <Button asChild
+                        variant="ghost"
+                        size="icon"
+                    >
+                        <Link href="/cart" aria-label="view cart">
+                            <ShoppingCart />
+                            {wishlist.length > 0 && (
+                                <Badge 
+                                    variant="count"
+                                    className="cart-count"
+                                >
+                                    {wishlist.length}  
+                                </Badge>
+                            )}
+                        </Link>    
+                    </Button>
+                    <Button asChild
+                        variant="ghost"
+                        size="icon"
+                    >
+                        <Link href="/wishlist" aria-label="view wishlist">
+                            <Heart />
+                            {wishlist.length > 0 && (
+                                <Badge 
+                                    variant="count"
+                                    className="wishlist-count"
+                                >
+                                    {wishlist.length}  
+                                </Badge>
+                            )}
                         </Link>
+                    </Button>
                 </nav>
-        </header>
+            </header>
     )
 }
 

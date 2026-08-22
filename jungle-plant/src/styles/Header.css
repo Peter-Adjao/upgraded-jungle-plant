@@ -18,7 +18,7 @@ h1 {
 }
 
 
-.wishlist-nav {
+.header-nav {
     position: relative;
 
     display: inline-flex;
@@ -27,14 +27,19 @@ h1 {
 }
 
 
-.header-count {
+.cart-count {
     position: absolute;
 
     top: -9px;
     right: -8px;
 }
 
-.header-wishlist-icon {
-    height: var(--space-6);
-    width: var(--space-6);
+
+
+.wishlist-count {
+    position: absolute;
+
+    top: -9px;
+    right: -8px;
 }
+
