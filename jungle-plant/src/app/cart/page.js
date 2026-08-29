@@ -4,6 +4,7 @@ import { useCart }  from "@/context/CartContext";
 import { useState, useMemo, useEffect } from "react";
 import Button from "@/components/ui/Button";
 import CartItem from "@/components/CartItem";
+import Footer from "@/components/Footer";
 import "./Cart.css";
 
 export default function CartPage() {
@@ -21,10 +22,9 @@ export default function CartPage() {
 						<div className="cart__items">
 							<ul className="cart__list">
 								{cart.map((plant) => (
-									<CartItem 
-									key={plant.id}
-									plant={plant}
-									/>
+									<li key={plant.id} className="cart__list-item">
+										<CartItem plant={plant} />
+									</li>
 								))}
 							</ul>
 						</div>
@@ -32,19 +32,21 @@ export default function CartPage() {
 						<section className="cart__summary-section">
 							<div className="cart__summary-content">
 								<h2 className="cart__summary-title">Cart Summary</h2>
-										<Button 
+									<div className="cart__summary-actions">
+										<Button
+										className="cart__summary-checkout-button" 
 										variant="primary"
 										size="lg"
 										rounded="sm"
-										className="cart__summary-checkout-button"
 										>
 										Checkout
 										</Button>
+									</div>
 							</div>				
 						</section>
 					</div>
 			</div>
-		
+			<Footer />					
 		</>
 		);
 	}

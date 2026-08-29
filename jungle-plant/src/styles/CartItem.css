@@ -2,14 +2,11 @@
 .cart-item-card {
     display: flex;
     flex-direction: column;
-    flex: 1;
 
     background-color: var(--bg-base);
     box-shadow: var(--shadow-sm);
     /* border-bottom: 1px solid var(--color-gray-300); */
     border-radius: var(--radius-sm);
-
-    border: 1px solid red;
 
     transition: 
     transform var(--transition-fast);
@@ -19,12 +16,12 @@
 
 .cart-item__image-wrapper {
     position: relative;
-    aspect-ratio: 1;
+    
     overflow: hidden;
     flex-shrink: 0;
-
+    aspect-ratio: 1;
     width: 100%;
-    height: 100%;
+
     border-radius: var(--radius-sm) var(--radius-sm) 0 0;
 }
 
@@ -49,9 +46,8 @@
 .cart-item__content {
     display: flex;
     flex-direction: column;
-    /* flex-wrap: wrap; */
 
-    gap: var(--space-4);
+    gap: var(--space-2);
 }
 
 
@@ -71,38 +67,22 @@
     color: var(--text-primary);
 }
 
-
-.cart-item__content-wrapper {
-    display: flex;
-    flex-direction: column;
-
-    border: 1px solid blue;
-} 
-
-
-.cart-item__content {
-    display: flex;
-    border: 1px solid brown;
-
-}
-
 .cart-item__actions {
     display: flex;
-
-    border: 1px solid rgb(2, 61, 20);
 }
+
 
 .change-button {
     display: flex;
     gap: var(--space-8);
 }
 
-.cart-item__decrease-button {
+#cart-item__decrease-button {
     background-color:var(--color-gray-400);
     color: var(--color-white);
 }
 
-.cart-item__decrease-button:hover {
+#cart-item__decrease-button:hover {
     background-color:var(--color-gray-500);
     
 }
@@ -116,37 +96,23 @@
 
 
 @media (min-width:768px) {
-
     .cart-item-card {
-        display: flex;
         flex-direction: row;
-        align-items: stretch;
-
-        /* padding: var(--space-4); */
+        align-items: flex-start;
+        gap: var(--space-4);
+        padding: var(--space-4);
     }
-
 
     .cart-item__image-wrapper {
         position: relative;
-        width: 150px;
-        flex-shrink: 0;
-        height: auto;
+        width: 120px;
+        aspect-ratio: 1;
 
-        border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+        border-radius: var(--radius-sm);
     }
 
-   /* .cart-item__content-wrapper {
-    display: flex;
-   } 
-
-
-   .car-item__content {
-    display: flex;
-   }
-
-   .cart-item__actions {
-    display: flex;
-   } */
-
+    .cart-item__content-wrapper {
+        padding: var(--space-0);
+    }
    
 }

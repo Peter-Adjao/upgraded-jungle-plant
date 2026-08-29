@@ -63,7 +63,7 @@ function EmptyState () {
                         className="empty-state__button"
                         variant="primary"
                         size="lg"
-                        rounded="md"
+                        rounded="sm"
                         >
                         Continue shopping
                     </Button>

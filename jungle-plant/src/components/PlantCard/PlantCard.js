@@ -56,6 +56,11 @@ function PlantCard({plant}) {
 						<CareScale careType='water' care={water} />
 						<CareScale careType='light' care={light} />
 					 </div> */}
+					 
+						<ProductRating 
+							rating={rating}
+							reviewCount={reviewCount}
+						/>
 
 						{/* Price and Add to Cart Section */}
 						<div className="plantcard-price-container">
@@ -75,10 +80,6 @@ function PlantCard({plant}) {
 								</Button>
 							</div>
 				        </div>
-						<ProductRating 
-							rating={rating}
-							reviewCount={reviewCount}
-						/>
 					</div>
 		</article>
 	)

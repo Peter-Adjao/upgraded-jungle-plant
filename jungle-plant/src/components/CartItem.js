@@ -22,18 +22,16 @@ export default function CartItem({ plant }) {
             <div className="cart-item__content-wrapper">
                 <h3 className="cart-item__name">{plant.name}</h3>
                     <div className="cart-item__content">
-                        <div className="cart-item__price-section">
                             <p className="cart-item__price">
                                 {formatCurrency(plant.price)}
                             </p>
-                        </div>
                         <footer className="cart-item__actions">
                             <div className="change-button">
                                 <Button 
                                     variant="secondary"
                                     size="icon"
                                     rounded="sm"
-                                    className="cart-item__decrease-button"
+                                    id="cart-item__decrease-button"
                                 >
                                     <Minus />
                                 </Button>

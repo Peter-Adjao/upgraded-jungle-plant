@@ -43,7 +43,7 @@ export default function WishlistItem({ plant }) {
                             <Button
                                 variant="primary"
                                 size="lg"
-                                rounded="md"
+                                rounded="sm"
                                 className="wishlist-add-to-cart-button"
                                 >
                                 Add to Cart
