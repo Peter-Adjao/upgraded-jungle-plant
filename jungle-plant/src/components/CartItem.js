@@ -32,8 +32,9 @@ export default function CartItem({ plant }) {
                                     size="icon"
                                     rounded="sm"
                                     id="cart-item__decrease-button"
+                                    aria-label={`Decrease ${plant.name} quantity`}
                                 >
-                                    <Minus />
+                                    <Minus aria-hidden="true"/>
                                 </Button>
 
                                 <p>{1}</p>
@@ -42,18 +43,20 @@ export default function CartItem({ plant }) {
                                     variant="primary"
                                     size="icon"
                                     rounded="sm"
+                                    aria-label={`Increase ${plant.name} quantity`}
                                     className="cart-item__increase-button"
                                 >
-                                    <Plus />
+                                    <Plus aria-hidden="true"/>
                                 </Button>
                             </div>
                             <Button 
                                 variant="ghostDestructive"
                                 size="icon"
                                 rounded="sm"
+                                aria-label={`Delete ${plant.name} from cart`}
                                 className="cart-item__remove-button"
                             >
-                             <Trash2 />   
+                             <Trash2 aria-hidden="true"/>   
                             </Button>
                         </footer>
                     </div>

@@ -33,19 +33,15 @@ export default function Footer() {
 
           {/* Brand Section */}
           <div className="footer-brand">
-
-            <div className="footer-logo">
-              <h2>Jungle House</h2>
-            </div>
+              <h2 className="footer__brand-text">Jungle House</h2>
 
             <p className="brand-description">
               Bringing Nature Home
             </p>
 
-            {/* Newsletter (Your Feature) */}
+            {/* Newsletter */}
             <div className="footer-newsletter">
-
-                <p>Subscribe to our newsletter for garden inspiration and expert plant care tips</p>
+                <p className="footer-newsletter__text">Subscribe to our newsletter for garden inspiration and expert plant care tips</p>
                       <div className="input-group">
                           <input
                             type="email"
@@ -66,48 +62,54 @@ export default function Footer() {
             </div>
 
             {/* Social Icons */}
-            <div className="social-container">
-                  <div>
-                    <h3>Connect with us</h3>
-                  </div>
-                        <div className="footer-social">
-                              <div className="social-icon facebook">
-                                  <a href="#" aria-label="Facebook">
-                                      <FaFacebook 
-                                      size={25} 
-                                      color="white"
-                                      aria-hidden="true"
-                                      />
-                                  </a>  
-                              </div> 
-                              <div className="social-icon instagram">
-                                  <a href="#" aria-label="Instagram">
-                                      <FaInstagram
-                                       size={25} 
-                                       color="white"
-                                       aria-hidden="true" 
-                                       />
-                                  </a>
-                              </div>
-                              <div className="social-icon youtube">
-                                  <a href="#" aria-label="Youtube">
-                                      <FaYoutube 
-                                      size={25} 
-                                      color="white" 
-                                      aria-hidden="true" 
-                                      />
-                                  </a>
-                              </div>
-                              <div className="social-icon X">
-                                  <a href="#" aria-label="X">
-                                      <FaXTwitter
-                                      size={25} 
-                                      color="white" 
-                                      aria-hidden="true"
-                                      />
-                                  </a>
-                              </div>
-                        </div>
+            <div className="social-media">
+              <h3 className="social-media__title">Connect with us</h3>
+              <ul className="social-list">
+                <li className="social-list__item">
+                    <a
+                     href="#" 
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     aria-label="Facebook"
+                     className="social-list__link"
+                    >
+                      <FaFacebook size={25} aria-hidden="true"/>
+                    </a> 
+                  </li>
+                  <li className="social-list__item">
+                    <a
+                     href="#" 
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     aria-label="Instagram"
+                     className="social-list__link"
+                    >
+                      <FaInstagram size={25} aria-hidden="true"/>
+                    </a> 
+                  </li> 
+                  <li className="social-list__item">
+                    <a
+                     href="#" 
+                     target="_blank"
+                     rel="noopener noreferrer"
+                    aria-label="YouTube"
+                    className="social-list__link"
+                    >
+                      <FaYoutube size={25} aria-hidden="true"/>
+                    </a> 
+                  </li>
+                  <li className="social-list__item">
+                    <a
+                     href="#" 
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     aria-label="X (formally Twitter)"
+                     className="social-list__link"
+                    >
+                      <FaXTwitter size={25} aria-hidden="true"/>
+                    </a> 
+                  </li>              
+              </ul>
             </div>
 
           </div>
@@ -123,12 +125,10 @@ export default function Footer() {
 
         </div>
 
-        <hr />
-
-        <div className="footer-bottom">
-          <p>© {currentYear} Jungle House. All rights reserved.</p>
-        </div>
-
+        <hr className="footer-divider" />
+            <div className="footer__copy-right-content">
+              <p className="footer__copy-right-text">&copy; {currentYear} Jungle House. All rights reserved.</p>
+            </div>
       </div>
 
     </footer>

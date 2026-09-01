@@ -1,14 +1,15 @@
 
 
 .footer-section h3 {
-    font-size: 1rem;
+    font-size: var(--text-base);
     color: var(--color-white);
 }
 
+
 .footer-section a {
     display: block;
-    margin-bottom: 0.75rem;
-    font-size: 0.9rem;
+    margin-bottom: var(--space-3);
+    font-size: var(--text-sm);
     font-weight: var(--weight-regular);
     color: var(--text-muted-primary);
     text-decoration: none;

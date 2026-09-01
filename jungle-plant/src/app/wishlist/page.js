@@ -85,7 +85,7 @@ function LoadingState() {
 
 
 export default function WishlistPage() {
-    const { wishlist, isLoaded } = useWishlist();
+    const { wishlist, clearWishlist, isLoaded } = useWishlist();
 
     const isEmpty = wishlist.length === 0;
     
@@ -119,7 +119,8 @@ export default function WishlistPage() {
                             <Button 
                             variant="ghostDestructive"
                             size="lg"
-                            rounded="md"
+                            rounded="sm"
+                            onClick={clearWishlist}
                             >
                                 <Trash2 aria-hidden="true"/>
                                 Clear All

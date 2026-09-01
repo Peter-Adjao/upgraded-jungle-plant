@@ -54,6 +54,12 @@ export function WishlistProvider({children}) {
         );
     };
 
+
+    const clearWishlist = () => {
+        setWishlist([]);
+    }
+
+
     const toggleWishlist = (product) => {
             if (isWishlisted(product.id)) {
             removeFromWishlist(product.id);
@@ -70,6 +76,7 @@ export function WishlistProvider({children}) {
                 addToWishlist,
                 removeFromWishlist,
                 toggleWishlist,
+                clearWishlist,
             }}
         >
             {children}
