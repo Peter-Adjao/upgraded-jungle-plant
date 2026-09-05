@@ -1,35 +1,35 @@
 
 
-.footer-section h3 {
+.footer-section__header {
     font-size: var(--text-base);
     color: var(--color-white);
 }
 
 
-.footer-section a {
+.footer-list__link {
     display: block;
     margin-bottom: var(--space-3);
     font-size: var(--text-sm);
     font-weight: var(--weight-regular);
     color: var(--text-muted-primary);
     text-decoration: none;
-    transition: var(--transition-normal);
+    transition: var(--transition-normal) var(--transition-colors);
 
 }
 
-.footer-section a:hover {
+.footer-list__link:hover {
     color: var(--color-white);
     text-decoration: underline;
 }
 
-.footer-links li {
-    list-style-type: none;
+.footer-list__item {
+    list-style: none;
     padding: 0;
     margin: 0;
 }
 
 
-.footer-links {
+.footer-list {
 padding: 0;
 margin: 0; 
 }

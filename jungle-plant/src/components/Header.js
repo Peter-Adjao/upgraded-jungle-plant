@@ -13,14 +13,15 @@ function Header() {
     const { wishlist } = useWishlist();
     
     return (
-            <header className="jh-header">
-                <div className="jh-logo-wrapper">
+            <header className="header">
+                <div className="logo-wrapper">
                     <Image
-                        src ="/logo.png" 
+                        src ="/icons/logo.png" 
                         alt="Jungle house logo" 
                         sizes="45px"
                         fill
-                        className="jh-logo-image"
+                        priority
+                        className="logo-image"
                     />
                 </div>
                 <div>

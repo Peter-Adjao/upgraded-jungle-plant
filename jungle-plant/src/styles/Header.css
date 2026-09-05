@@ -1,4 +1,4 @@
-.jh-header {
+.header {
     color: var(--text-primary);
     text-align: right;
     padding: 2rem;
@@ -13,10 +13,6 @@
     z-index: 10;
 }
 
-h1 {
-    text-shadow: 0.55rem 0.55rem #11af82;
-}
-
 
 .header-nav {
     position: relative;
@@ -27,9 +23,21 @@ h1 {
 }
 
 
+.logo-wrapper {
+    position: relative;
+    height: 45px;
+    width: 45px;
+    flex-shrink: 0;
+
+}
+
+.logo-image {
+    object-fit: contain;
+}
+
+
 .cart-count {
     position: absolute;
-
     top: -9px;
     right: -8px;
 }

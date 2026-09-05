@@ -11,54 +11,92 @@ import "./Footer.css";
 export default function Footer() {
 
   const [inputValue, setInputValue] = useState("");
+  const [hasError, setHasError] = useState(false);
+  const [isSubscribe, setIsSubscribe] = useState(false);
+
 
   function handleInput(e) {
     setInputValue(e.target.value);
+    if (hasError) setHasError(false);//clear error
   }
 
   function handleBlur() {
-    if (!inputValue.includes("@")) {
-      alert("Please enter a valid email address 😥");
+    const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inputValue);
+    setHasError(inputValue.length > 0 && !isValidEmail);
+  }
+
+  function handleSubmit (e) {
+    e.preventDefault();
+
+    const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inputValue);
+    if (!isValidEmail) {
+      setHasError(true);
+      return;
     }
+
+    setInputValue(""); 
+    setHasError(false);
+    setIsSubscribe(true);
   }
 
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="footer" role="contentinfo">
-
       <div className="footer-container">
-
         <div className="footer-grid">
 
           {/* Brand Section */}
           <div className="footer-brand">
               <h2 className="footer__brand-text">Jungle House</h2>
-
-            <p className="brand-description">
-              Bringing Nature Home
-            </p>
+              <p className="brand-description">
+                We need each other
+              </p>
 
             {/* Newsletter */}
             <div className="footer-newsletter">
                 <p className="footer-newsletter__text">Subscribe to our newsletter for garden inspiration and expert plant care tips</p>
-                      <div className="input-group">
-                          <input
-                            type="email"
-                            placeholder="Enter your email"
-                            value={inputValue}
-                            onChange={handleInput}
-                            onBlur={handleBlur}
-                            className="footer-input"
-                          />
-                          <Button 
-                           size="lg"
-                           variant="subscribe"
-                           rounded="right"
-                           >
-                            Subscribe
-                          </Button>
+                    {isSubscribe ? (
+                      <p role="status" className="form__success-message">
+                        Thanks for subscribing.
+                      </p>
+                    ) : ( 
+                      <form  method="POST" onSubmit={handleSubmit} className="form">
+                        <div className="form__content">
+                          <label htmlFor="footer-email" className="label-visually-hidden">
+                            Email address
+                          </label>
+                            <input
+                              id="footer-email"
+                              type="email"
+                              name="email"
+                              autoComplete="email"
+                              required
+                              placeholder="Enter your email"
+                              value={inputValue}
+                              onChange={handleInput}
+                              onBlur={handleBlur}
+                              aria-invalid={hasError}
+                              aria-describedby={hasError ?  "form__email-error" : undefined}
+                              className="form__input"
+                            />
+                            <Button 
+                            type="submit"
+                            size="lg"
+                            variant="subscribe"
+                            rounded="right"
+                            >
+                              Subscribe
+                            </Button>
                       </div>
+                      <p 
+                      id="form__email-error" 
+                      role="alert" 
+                      className="form__input-error"> 
+                          {hasError ? "Please enter a valid email address." : "" }
+                      </p>
+                      </form>
+                    )}
             </div>
 
             {/* Social Icons */}
@@ -122,7 +160,6 @@ export default function Footer() {
               links={section.links}
             />
           ))}
-
         </div>
 
         <hr className="footer-divider" />

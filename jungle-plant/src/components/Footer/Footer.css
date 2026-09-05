@@ -26,17 +26,69 @@
 }
 
 .brand-description {
+	text-transform: capitalize;
 	font-size: var(--space-4);
 	font-weight:var(--weight-regular);
 	line-height: var(--leading-relaxed);
-	color: var(--color-gray-300);
+	color: var(--text-muted-primary);
+}
+
+
+.form__content {
+	display: flex;
+}
+
+
+.form__input {
+	flex: 1;
+	padding: var(--space-1);
+	background-color: var(--input-background);
+	border: 1px solid var(--input-border);
+	border-top-left-radius: var(--radius-md);
+	border-bottom-left-radius: var(--radius-md);
+	color: var(--color-white); 
+	cursor: pointer;
+	transition: var(--transition-colors), var(--transition-shadow);
+}
+
+
+.form__input:focus {
+	border-color: var(--input-focus);
+	box-shadow: var(--shadow-input);
+	outline: none;
+	padding: var(--space-2);
 }
  
 
-.footer-social .social-icon:hover {
-	transform: translateY(-0.3rem);	
+.label-visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: var(--space-0);
+	margin: var(--neg-space-1);
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: var(--space-0);
 }
 
+
+.form__success-message {
+	color: var(--color-primary);
+	font-weight:var(--weight-regular);
+	line-height: var(--leading-relaxed);
+	border-radius: var(--radius-sm);
+}
+
+.form__input-error {
+	min-height: var(--space-6);
+	margin-top: var(--space-1);
+
+	font-size: var(--text-sm);
+	font-weight:var(--weight-regular);
+	line-height: var(--leading-relaxed);
+	color: var(--color-destructive);
+}
 
 .social-list {
 	display: flex;
@@ -98,32 +150,6 @@
 }
 
 
-.input-group {
-	display: flex;
-}
-
-
-.footer-input {
-	flex: 1;
-	padding: var(--space-1);
-	background-color: var(--input-background);
-	border: 1px solid var(--input-border);
-	border-top-left-radius: var(--radius-md);
-	border-bottom-left-radius: var(--radius-md);
-	color: var(--color-white); 
-	cursor: pointer;
-	transition: var(--transition-colors), var(--transition-shadow);
-}
-
-
-input:focus {
-	border-color: var(--input-focus);
-	box-shadow: 0 0 4px rgba(173, 168, 168, 0.9);
-	outline: none;
-	padding: var(--space-2);
-}
-
-
 .footer__copy-right-content {
 	display: flex;
 	justify-content: start;
@@ -144,6 +170,10 @@ input:focus {
 @media (min-width: 768px) {
 	.footer-grid {
 		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.form__input:focus {
+		padding: var(--space-1);
 	}
 
 
