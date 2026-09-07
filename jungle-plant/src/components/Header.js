@@ -1,6 +1,7 @@
 "use client";
 
 import { useWishlist } from "@/context/WishlistContext";
+import { useCart } from "@/context/CartContext";
 import Image from "next/image";
 import { Heart, ShoppingCart } from "lucide-react";
 import Button from "@/components/ui/Button";
@@ -11,40 +12,45 @@ import "@/styles/Header.css";
 function Header() {
     const title = "Jungle House";
     const { wishlist } = useWishlist();
+    const { cart } = useCart();
     
     return (
             <header className="header">
-                <div className="logo-wrapper">
-                    <Image
-                        src ="/icons/logo.png" 
-                        alt="Jungle house logo" 
-                        sizes="45px"
-                        fill
-                        priority
-                        className="logo-image"
-                    />
-                </div>
-                <div>
-                    <h1 className="jh-title">{title}</h1>
-                </div>
+                <Link href="/" className="logo-link">
+                    <div className="logo-wrapper">
+                        <Image
+                            src ="/icons/jh-large.png" 
+                            alt="Jungle house logo" 
+                            sizes="50px"
+                            fill
+                            priority
+                            className="logo-image"
+                        />
+                    </div>
+                </Link>
                 <nav className="header-nav">
-                    <Button asChild
+                    <Button 
+                        asChild
                         variant="ghost"
                         size="icon"
                     >
-                        <Link href="/cart" aria-label="view cart">
+                        <Link href="/cart"
+                         aria-label="view cart"
+                         className="header-nav__link"
+                         >
                             <ShoppingCart />
-                            {wishlist.length > 0 && (
+                            {cart.length > 0 && (
                                 <Badge 
                                     variant="count"
-                                    className="cart-count"
+                                    className="cart-count-badge"
                                 >
-                                    {wishlist.length}  
+                                    {cart.length}  
                                 </Badge>
                             )}
                         </Link>    
                     </Button>
-                    <Button asChild
+                    <Button 
+                        asChild
                         variant="ghost"
                         size="icon"
                     >

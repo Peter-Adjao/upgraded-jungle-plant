@@ -1,8 +1,4 @@
 .header {
-    color: var(--text-primary);
-    text-align: right;
-    padding: 2rem;
-    border-bottom: solid 3px black;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -11,22 +7,34 @@
     position: sticky;
     top: 0;
     z-index: 10;
+
+    padding: var(--space-2) var(--space-4) 0 var(--space-4) ;
+    box-shadow: var(--shadow-sm);
 }
 
 
 .header-nav {
     position: relative;
-
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    gap: var(--space-4);
+}
+
+.header-nav__link {
+    position: relative;
 }
 
 
+.logo-link{
+    text-decoration: none;
+    color: inherit;
+}
+
 .logo-wrapper {
     position: relative;
-    height: 45px;
-    width: 45px;
+    height: 50px;
+    width: 130px;
     flex-shrink: 0;
 
 }
@@ -36,9 +44,9 @@
 }
 
 
-.cart-count {
+.cart-count-badge {
     position: absolute;
-    top: -9px;
+    top: -7px;
     right: -8px;
 }
 
@@ -47,7 +55,7 @@
 .wishlist-count {
     position: absolute;
 
-    top: -9px;
+    top: -7px;
     right: -8px;
 }
 

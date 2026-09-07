@@ -5,7 +5,7 @@ import "@/styles/globals.css";
 
 export const metadata = {
     title: "Jungle House",
-    descriptiton: "An ecommerce app to for all plants"
+    descriptiton: "An ecommerce app to for selling plants"
 };
 
 export default function RootLayout({ children}) {

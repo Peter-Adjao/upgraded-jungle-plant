@@ -7,16 +7,16 @@ import Categories from "./Categories";
 import { useCart } from "@/context/CartContext";
 import "@/styles/ShoppingList.css";
 
-function ShoppingList({plant}) {
+function ShoppingList() {
 	// Selected category
-	const [activeCategory, setActiveCategory] = useState('')
+	const [activeCategory, setActiveCategory] = useState("");
 
 	// Get unique categories
 	const categories = [...new Set(
 		plantList.map((plant) => plant.category)
-	)]
+	)];
 
-	const { cart, addToCart } = useCart();
+	const { addToCart } = useCart();
 		
 	return (
 		<div className="shopping__page">

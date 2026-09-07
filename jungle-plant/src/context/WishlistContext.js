@@ -11,14 +11,14 @@ export function WishlistProvider({children}) {
     const [wishlist, setWishlist] = useState([]);
     const [isLoaded, setIsLoaded] = useState(false);
 
-    //Load saved wishlist from localstorage once, when the app fisrt mounts
+    //Load saved wishlist from local storage once, when the app fisrt mounts
     useEffect(() => {
         const stored = localStorage.getItem("wishlist");
         if(stored) setWishlist(JSON.parse(stored));
         setIsLoaded(true);
     }, []);
 
-    // Save wisshlist to localStorage whenever it changes (after initial load)
+    // Save wishlist to local Storage whenever it changes (after initial load)
     useEffect(() => {
         if (isLoaded) {
             localStorage.setItem("wishlist", JSON.stringify(wishlist));

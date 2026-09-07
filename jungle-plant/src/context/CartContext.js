@@ -1,6 +1,6 @@
 "use client"
 
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 
 
@@ -9,6 +9,8 @@ const CartContext = createContext();
 // Cart Provider
 export function CartProvider({ children }) {
     const [cart, setCart] = useState([]);
+    const [isLoaded, setIsLoaded] = useState(false);
+
 
     function addToCart(plant) {
         setCart((prevCart) => {
@@ -37,7 +39,20 @@ export function CartProvider({ children }) {
         });
     }
 
-    console.log("Cart:", cart );
+//Load saved cart items from local storage once, when the app first mounts
+    useEffect(() => {
+        const stored = localStorage.getItem("cart");
+        if (stored) setCart(JSON.parse(stored));
+        setIsLoaded(true);
+    }, []);
+
+
+//save cart items to local storage whenever it changes, (after initial load) 
+    useEffect(() => {
+        if (isLoaded) {
+            localStorage.setItem("cart", JSON.stringify(cart));                             
+        }
+    }, [cart, isLoaded]);
     return (
         <CartContext.Provider
             value={{
