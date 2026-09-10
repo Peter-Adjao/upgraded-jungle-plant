@@ -39,6 +39,7 @@ function PlantCard({plant}) {
 					src={cover}
 					alt={`${plant.name} plant`}
 					fill
+					priority
 					className='plant-card-image'
 				/>
 				 <WishlistButton

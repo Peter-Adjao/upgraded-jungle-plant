@@ -1,0 +1,115 @@
+.search-bar {
+    position: relative;
+    width: auto;
+}
+
+/*Mobile search trigger*/
+
+.search-bar__trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: var(--space-10);
+    height: var(--space-10);
+    padding:var(--space-0);
+
+    border: 0;
+    border-radius: var(--radius-full);
+
+    background: transparent;
+    color: var(--color-gray-700);
+
+    cursor: pointer;
+
+    transition: var(--transition-colors);
+}
+
+
+.search-bar__trigger:active {
+    background-color: var(--color-gray-100);
+}
+
+.search-bar__trigger:active {
+    transform: scale(0.96);
+}
+
+/*Search form*/
+
+.search-bar__form {
+    display: none;
+}
+
+/*Mobile explained state*/
+
+.search-bar--expanded {
+    position: fixed;
+    inset: 0;
+
+    z-index: 300;
+
+    display: flex;
+    align-items: flex-start;
+
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+
+    background-color: var(--color-white);
+}
+
+.search-bar--expanded .search-bar__form {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+
+    width: 100%;
+    min-height: var(--space-11);
+    padding: 0 var(--space-3);
+
+    background-color: var(--color-gray-100);
+
+    border: 1px solid transparent;
+    border-radius: var(--radius-full);
+
+    transition: var(--transition-colors), var(--transition-shadow); 
+}
+
+.search-bar--expanded .search-bar__form:focus-within {
+    background-color: var(--color-white);
+    border-color: var(--colorprimary);
+
+    box-shadow: var(--shadow-sm);
+}
+
+/*Mobile back button*/
+
+.search-bar_back {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: var(--space-8);
+    height: var(--space-8);
+
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+
+    color: var(--color-gray-700);
+    cursor: pointer;
+}
+
+/*Search Icon*/
+
+.search-bar__icon { 
+    flex-shrink: 0;
+
+    color: var(--color-gray-500);
+}
+
+/*Input*/
+
+

@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Heart, ShoppingCart } from "lucide-react";
 import Button from "@/components/ui/Button";
 import Badge from "@/components/ui/Badge";
+import SearchBar from "@/components/SearchBar";
 import Link from "next/link";
 import "@/styles/Header.css";
 
@@ -28,6 +29,9 @@ function Header() {
                         />
                     </div>
                 </Link>
+
+                <SearchBar />
+
                 <nav className="header-nav">
                     <Button 
                         asChild
