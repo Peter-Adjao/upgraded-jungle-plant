@@ -81,6 +81,7 @@ function SearchBar() {
             <Button
             variant="ghost"
             size="icon"
+            rounded="full"
             type="button"
             aria-label="Close Search"
             onClick={closeSearch}
@@ -112,6 +113,7 @@ function SearchBar() {
                     <Button
                     variant="ghost"
                     size="icon"
+                    rounded="full"
                     type="button"
                     aria-label="Clear search"
                     onClick={clearSearch}
