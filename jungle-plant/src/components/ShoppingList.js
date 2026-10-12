@@ -27,7 +27,7 @@ function ShoppingList() {
 					categories={categories}
 					activeCategory={activeCategory}
 					setActiveCategory={setActiveCategory}
-				/>
+				/>  
 
 				{/* Plant list */}
 				<ul className="jh-plant-list">

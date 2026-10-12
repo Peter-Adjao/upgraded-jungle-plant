@@ -15,7 +15,7 @@ export const plantList = [
     },
     {
         name: "Ficus Lyrata",
-        catregory: "Classic",
+        category: "Classic",
         id: "2f",
         price: 26.50,
         rating: 4.8,
