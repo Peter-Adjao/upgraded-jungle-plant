@@ -6,6 +6,7 @@ export function searchProducts(products, normalizedQuery) {
     const matchedProducts = products.filter(product =>
         product.name.trim().toLowerCase().includes(normalizedQuery)
     );
+    
 
     return matchedProducts;
 }

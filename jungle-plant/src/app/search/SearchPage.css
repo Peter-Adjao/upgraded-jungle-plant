@@ -1,0 +1,20 @@
+
+.jh-shopping-list {
+    width: 95%;
+    padding: var(--space-5);
+    margin: 0 auto;
+    margin-top: var(--space-5);
+
+
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-sm);
+}
+
+
+.jh-plant-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--space-5);
+
+    list-style-type: none;
+} 

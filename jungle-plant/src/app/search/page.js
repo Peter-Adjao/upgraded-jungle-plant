@@ -1,5 +1,8 @@
 import { plantList } from "@/datas/plantList";
 import { searchProducts } from "@/utils/searchProducts";
+import PlantCard from "@/components/PlantCard/PlantCard";
+import "./SearchPage.css";
+
 
 export default async function SearchPage({searchParams}) {
     const params = await searchParams;
@@ -14,28 +17,42 @@ export default async function SearchPage({searchParams}) {
         normalizedQuery
     );
 
-
+    const resultCount = matchingProducts.length;
+    const resultLabel = resultCount === 1
+    ? "product" : "products";
+ 
+    const displayQuery = query.trim();
+    const resultMessage = `${resultCount} ${resultLabel} found for "${displayQuery}"`;
+    
 
     return (
-        <div>
-            <h2>Search</h2>
-            <p>
-                {normalizedQuery === ""  && "No search query"}
-            </p>
+        <div className="jh-shopping-list">
+            { normalizedQuery.length > 0 
+            ? <h2>Search results for "{displayQuery}"</h2>
+            : <h2>Search plants</h2>
+            }
 
-            {/* */}
-            <div>
-                {query != 0 && matchingProducts.length === 0 ? (
-                    "No products found"
-                ):(
-                    <ul>{matchingProducts.map(plant => (
-                        <li key={plant.id}>
-                            {plant.name}
-                        </li>
+            { resultCount > 0 &&
+                <p>{resultMessage}</p>
+            }
+
+            { normalizedQuery === ""
+                ? <p>Enter a plant name in the search bar to get started.</p>
+                
+                : matchingProducts.length === 0  
+                    ? <p>No products found for "{displayQuery}". Try another search term.</p>
+                
+                    : (
+                    <ul className="jh-plant-list">
+                        {matchingProducts.map(plant => (
+                            <li key={plant.id}>
+                                <PlantCard
+                                    plant={plant}
+                                />
+                            </li>
                     ))}
                     </ul>
-                )} 
-            </div>
+                )}
         </div>
     );
 } 
